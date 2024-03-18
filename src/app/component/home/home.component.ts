@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { EmployeeService } from '../services/employee.service';
 import { EmpAddEditComponent } from '../emp-add-edit/emp-add-edit.component';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-home',
@@ -35,7 +36,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private _dialog: MatDialog,
-    private _empService: EmployeeService,    
+    private _empService: EmployeeService,
+    private _coreService: CoreService 
   ) {}
 
   ngOnInit(): void {
@@ -75,7 +77,8 @@ export class HomeComponent implements OnInit {
 
   deleteEmployee(id: number) {
     this._empService.deleteEmployee(id).subscribe({
-      next: (res) => {        
+      next: (res) => {
+        this._coreService.openSnackBar('Employee deleted!', 'done');     
         this.getEmployeeList();
       },
       error: console.log,
