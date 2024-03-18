@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Brinn",
+      "lastName": "Jephcote",
+      "email": "bjephcote0@archive.org",
+      "dob": "1981-10-05T12:09:39Z",
+      "gender": "Male",
+      "education": "Graduate",
+      "company": "Gabspot",
+      "experience": 0.036,
+      "package": 0.037,
+      "id": 1
+    },
+    {
+      "firstName": "Kenneth",
+      "lastName": "MacElholm",
+      "email": "kmacelholm1@sina.com.cn",
+      "dob": "1991-09-12T22:14:02Z",
+      "gender": "Male",
+      "education": "Matric",
+      "company": "Agivu",
+      "experience": 75,
+      "package": 17,
+      "id": 2
+    },
+    {
+      "firstName": "Kimmy",
+      "lastName": "Penniall",
+      "email": "kpenniall2@biblegateway.com",
+      "dob": "1980-05-19T08:23:30Z",
+      "gender": "Male",
+      "education": "Graduate",
+      "company": "Mycat",
+      "experience": 45,
+      "package": 17,
+      "id": 3
+    }
+  ]
+}
