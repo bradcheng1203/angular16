@@ -25,7 +25,7 @@
       "gender": "Male",
       "education": "Graduate",
       "company": "Gabspot",
-      "experience": 0.036,
+      "experience": 4,
       "package": 0.037,
       "id": 1
     },
@@ -37,7 +37,7 @@
       "gender": "Male",
       "education": "Matric",
       "company": "Agivu",
-      "experience": 75,
+      "experience": 43,
       "package": 17,
       "id": 2
     },

@@ -1,8 +1,8 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { EmployeeService } from '../../@services/employee.service';
-import { CoreService } from '../core/core.service';
+import { EmployeeService } from '../../../@services/employee.service';
+import { CoreService } from '../../core/core.service';
 
 @Component({
   selector: 'app-emp-add-edit',

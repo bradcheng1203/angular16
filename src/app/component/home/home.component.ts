@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { EmployeeService } from '../../@services/employee.service';
-import { EmpAddEditComponent } from '../emp-add-edit/emp-add-edit.component';
+import { EmpAddEditComponent } from '../menubar/emp-add-edit/emp-add-edit.component';
 import { CoreService } from '../core/core.service';
 
 @Component({

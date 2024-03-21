@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './component/home/home.component';
 import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
 import { CardComponent } from './component/card/card.component';
-import { EmpAddEditComponent } from './component/emp-add-edit/emp-add-edit.component';
+import { EmpAddEditComponent } from './component/menubar/emp-add-edit/emp-add-edit.component';
 import { MenubarComponent } from './component/menubar/menubar.component';
 import { EmployeeComponent } from './component/menubar/employee/employee.component';
 import { SliderComponent } from './component/menubar/slider/slider.component';
