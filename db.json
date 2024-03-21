@@ -95,7 +95,7 @@
       "email": "te@in.com",
       "gender": "male",
       "role": "user",
-      "isactive": true
+      "isactive": false
     },
     {
       "id": "ntuser",
@@ -104,7 +104,7 @@
       "email": "te@in.com",
       "gender": "male",
       "role": "user",
-      "isactive": true
+      "isactive": false
     }
   ],
   "role": [
