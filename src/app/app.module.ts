@@ -17,7 +17,8 @@ import { SliderComponent } from './component/menubar/slider/slider.component';
 import { TableComponent } from './component/menubar/table/table.component';
 import { DashboardComponent } from './component/menubar/dashboard/dashboard.component';
 import { InputComponent } from './component/menubar/input/input.component';
-
+import { LoginComponent } from './login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { InputComponent } from './component/menubar/input/input.component';
     HomeComponent,    
     AutocompleteComponent, 
     CardComponent, 
-    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent,
+    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,8 @@ import { InputComponent } from './component/menubar/input/input.component';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

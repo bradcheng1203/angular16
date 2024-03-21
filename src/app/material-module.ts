@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import {NgModule } from "@angular/core";
 import {MatInputModule} from "@angular/material/input"
 import {MatSelectModule} from "@angular/material/select"
 import {MatAutocompleteModule} from "@angular/material/autocomplete"
@@ -20,8 +20,8 @@ import {MatRadioModule} from "@angular/material/radio"
 import {MatCheckboxModule} from "@angular/material/checkbox"
 import {MatDialogModule} from "@angular/material/dialog"
 import {MatGridListModule} from '@angular/material/grid-list'
-import { MatSnackBarModule } from "@angular/material/snack-bar";
-
+import {MatSnackBarModule } from "@angular/material/snack-bar";
+import {MatTabsModule} from '@angular/material/tabs';
 @NgModule({
 exports:[
     MatInputModule,
@@ -46,6 +46,7 @@ exports:[
     MatDialogModule,
     MatGridListModule,
     MatSnackBarModule,
+    MatTabsModule,
 ]
 })
 export class MaterialModule{}

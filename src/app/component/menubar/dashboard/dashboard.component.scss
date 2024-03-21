@@ -1,0 +1,24 @@
+.main-body {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 1348px;
+  mat-form-field {
+    width: 100%;
+  }
+  .pr{
+    width: 85% ;
+    padding-right: 50px;
+  }
+}
+
+.action {
+  display: flex;
+  gap: 5px;
+}
+
+.card-class{
+  margin: 3%;
+  width: 18%;
+  text-align: left;
+  float: left;
+}

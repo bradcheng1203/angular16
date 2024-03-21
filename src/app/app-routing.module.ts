@@ -10,9 +10,10 @@ import { EmployeeComponent } from './component/menubar/employee/employee.compone
 import { SliderComponent } from './component/menubar/slider/slider.component';
 import { TableComponent } from './component/menubar/table/table.component';
 import { InputComponent } from './component/menubar/input/input.component';
+import { LoginComponent } from './login/login.component';
 
-const routes: Routes = [
-  {path:'',component:CardComponent},
+const routes: Routes = [  
+  {path:'login',component:LoginComponent},
   {path:'menu',component:MenubarComponent,
     children:[      
       {path:'employee',component:EmployeeComponent},      
@@ -24,9 +25,7 @@ const routes: Routes = [
       {path:'', redirectTo:'card', pathMatch:'full' }
     ]
   },
-  {path:'autocomplete',component:AutocompleteComponent},
-  {path:'card',component:CardComponent},
-  {path:'emp',component:EmpAddEditComponent},
+  {path:'', redirectTo:'login', pathMatch:'full' }
 ];
 
 @NgModule({
