@@ -105,24 +105,6 @@
       "gender": "male",
       "role": "user",
       "isactive": false
-    },
-    {
-      "id": "aaaaaa",
-      "name": "aaaa",
-      "password": "Test@1234",
-      "email": "bradcheng@gmail.com",
-      "gender": "male",
-      "role": "user",
-      "isactive": true
-    },
-    {
-      "id": "bbbbbb",
-      "name": "bbbbbb",
-      "password": "Test@1234",
-      "email": "1203@gmail.com",
-      "gender": "female",
-      "role": "user",
-      "isactive": false
     }
   ],
   "role": [

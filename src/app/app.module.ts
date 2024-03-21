@@ -22,6 +22,7 @@ import { AutocompleteComponent } from './component/menubar/autocomplete/autocomp
 import { UserComponent } from './component/menubar/user/user.component';
 import { UpdatepopupComponent } from './component/menubar/updatepopup/updatepopup.component';
 import { RegisterComponent } from './register/register.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,    
     AutocompleteComponent, 
     CardComponent, 
-    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, RegisterComponent,
+    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, RegisterComponent, NotfoundComponent,
   ],
   imports: [
     BrowserModule,

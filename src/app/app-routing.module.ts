@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { AutocompleteComponent } from './component/menubar/autocomplete/autocomplete.component';
 import { authGuard } from './@guard/auth.guard';
 import { UserComponent } from './component/menubar/user/user.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [  
   {path:'login',component:LoginComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
       {path:'', redirectTo:'dashboard', pathMatch:'full' }
     ],canActivate:[authGuard]
   },
-  {path:'', redirectTo:'login', pathMatch:'full' }
+  {path:'', redirectTo:'login', pathMatch:'full' },
+  {path:'**', component:NotfoundComponent }
 ];
 
 @NgModule({
