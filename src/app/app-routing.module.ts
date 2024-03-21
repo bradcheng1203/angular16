@@ -11,19 +11,22 @@ import { TableComponent } from './component/menubar/table/table.component';
 import { InputComponent } from './component/menubar/input/input.component';
 import { LoginComponent } from './login/login.component';
 import { AutocompleteComponent } from './component/menubar/autocomplete/autocomplete.component';
+import { authGuard } from './@guard/auth.guard';
+import { UserComponent } from './component/menubar/user/user.component';
 
 const routes: Routes = [  
   {path:'login',component:LoginComponent},
   {path:'menu',component:MenubarComponent,
     children:[      
-      {path:'employee',component:EmployeeComponent},      
+      {path:'employee',component:EmployeeComponent},
+      {path:'user',component:UserComponent},      
       {path:'dashboard',component:DashboardComponent},      
       {path:'slider',component:SliderComponent},
       {path:'table',component:TableComponent},
       {path:'input',component:InputComponent},
       {path:'autocomplete',component:AutocompleteComponent},
       {path:'', redirectTo:'dashboard', pathMatch:'full' }
-    ]
+    ],canActivate:[authGuard]
   },
   {path:'', redirectTo:'login', pathMatch:'full' }
 ];
