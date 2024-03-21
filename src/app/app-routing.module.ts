@@ -1,3 +1,4 @@
+import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './component/menubar/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -16,6 +17,7 @@ import { UserComponent } from './component/menubar/user/user.component';
 
 const routes: Routes = [  
   {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
   {path:'menu',component:MenubarComponent,
     children:[      
       {path:'employee',component:EmployeeComponent},

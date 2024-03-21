@@ -20,10 +20,11 @@ export class UserComponent implements AfterViewInit {
   dataSource: any;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  
+  pageSize = 10;
 
-  ngAfterViewInit(): void {
-
-  }
+  ngAfterViewInit(): void {}
+  
   LoadUser() {
     this.service.Getall().subscribe(res => {
       this.userlist = res;

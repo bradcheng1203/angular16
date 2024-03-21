@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AutocompleteComponent } from './component/menubar/autocomplete/autocomplete.component';
 import { UserComponent } from './component/menubar/user/user.component';
 import { UpdatepopupComponent } from './component/menubar/updatepopup/updatepopup.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,7 @@ import { UpdatepopupComponent } from './component/menubar/updatepopup/updatepopu
     HomeComponent,    
     AutocompleteComponent, 
     CardComponent, 
-    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent,
+    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, RegisterComponent,
   ],
   imports: [
     BrowserModule,
