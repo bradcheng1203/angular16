@@ -9,7 +9,6 @@ import { MaterialModule } from './material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './component/home/home.component';
-import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
 import { CardComponent } from './component/card/card.component';
 import { EmpAddEditComponent } from './component/menubar/emp-add-edit/emp-add-edit.component';
 import { EmployeeComponent } from './component/menubar/employee/employee.component';
@@ -19,6 +18,7 @@ import { DashboardComponent } from './component/menubar/dashboard/dashboard.comp
 import { InputComponent } from './component/menubar/input/input.component';
 import { LoginComponent } from './login/login.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AutocompleteComponent } from './component/menubar/autocomplete/autocomplete.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot({timeOut: 2000})
   ],
   providers: [],
   bootstrap: [AppComponent]

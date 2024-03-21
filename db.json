@@ -52,6 +52,18 @@
       "experience": 45,
       "package": 17,
       "id": 3
+    },
+    {
+      "firstName": "Wendy",
+      "lastName": "Tom",
+      "email": "cheng@gmail.com",
+      "dob": "2024-03-21T16:00:00.000Z",
+      "gender": "Male",
+      "education": "Diploma",
+      "company": "GG",
+      "experience": 3,
+      "package": 4,
+      "id": 4
     }
   ],
   "user": [
