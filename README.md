@@ -242,5 +242,13 @@ ng g c employee
   { path:'emp',component:EmpAddEditComponent},
   { path:'', redirectTo:'/login', pathMatch:'full' }
   
-  
+.number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid maroon;
+  box-sizing: border-box;
+}
+
+
   
