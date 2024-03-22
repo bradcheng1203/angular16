@@ -85,8 +85,8 @@
       "password": "Test@1234",
       "email": "test@in.com",
       "gender": "male",
-      "role": "tech",
-      "isactive": false
+      "role": "user",
+      "isactive": true
     },
     {
       "id": "Jhon1",
@@ -104,7 +104,7 @@
       "email": "te@in.com",
       "gender": "male",
       "role": "user",
-      "isactive": false
+      "isactive": true
     }
   ],
   "role": [
@@ -253,9 +253,9 @@
       "name": "Ravi",
       "address": [
         {
-          "title": "Address11111",
+          "title": "Address22",
           "country": "England",
-          "fulladdress": "1st street,new nager,\nchennai"
+          "fulladdress": "1st street,new nager"
         }
       ]
     },
@@ -265,18 +265,13 @@
       "address": [
         {
           "title": "kUmar address1",
-          "country": "Australia1",
+          "country": "England",
           "fulladdress": "Address 1"
         },
         {
           "title": "Kumar address tilte",
           "country": "England1",
           "fulladdress": "Add 2"
-        },
-        {
-          "title": "3",
-          "country": "England1",
-          "fulladdress": "Address - 3 Title"
         }
       ]
     },
@@ -309,5 +304,33 @@
       "code": "England",
       "name": "England"
     }
+  ],
+  "CustomerGetAll": [
+    {
+      "id": 1,
+      "name": "rakhesh",
+      "code":"1001",
+      "Creditlimit": 1000,
+      "address":"address123"
+    },
+    {
+      "id": 2,
+      "name": "rahul",
+      "code":"1002",
+      "Creditlimit": 1000,
+      "address":"address234"
+    }
+  ],
+  "ProductGetAll":[
+    {
+      "id": 1 ,
+      "code": "India",
+      "name": "India"
+    },
+    {
+      "id": 2 ,
+      "code": "Australia",
+      "name": "Australia"
+    }    
   ]
 }

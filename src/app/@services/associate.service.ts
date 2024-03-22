@@ -6,21 +6,28 @@ import { Country } from '../@model/Customer';
 @Injectable({
   providedIn: 'root'
 })
-export class MasterService {
+export class AssociateService {
 
   constructor(private http: HttpClient) { }
   
-  GetAssociate(){
+  getAssociate(){
     return this.http.get('http://localhost:3000/associate');
   }
-  GetAssociatebycode(code:any){
+  
+  getAssociatebycode(code:any){    
     return this.http.get('http://localhost:3000/associate/'+code);
   }
-  GetCountry():Observable<Country[]>{
+  
+  getCountry():Observable<Country[]>{
+    console.log( 'getCountry' );
     return this.http.get<Country[]>('http://localhost:3000/country');
   }
 
-  SaveAssociate(data:any,code:any){
+  saveAssociate(data:any,code:any){    
     return this.http.put('http://localhost:3000/associate/'+code,data);
   }
+  
+  deleteAssociate(data:any,code:any){    
+    return this.http.delete('http://localhost:3000/associate/'+code,data);
+  }  
 }

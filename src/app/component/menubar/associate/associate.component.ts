@@ -3,7 +3,7 @@ import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Observable, map, startWith } from 'rxjs';
 import { Country } from 'src/app/@model/Customer';
-import { MasterService } from 'src/app/@services/master.service';
+import { AssociateService } from 'src/app/@services/associate.service';
 
 @Component({
   selector: 'app-associate',
@@ -18,7 +18,7 @@ export class AssociateComponent implements OnInit {
   filteroptions !: Observable<Country[]>
   editdata: any;
   
-  constructor(private builder: FormBuilder, private service: MasterService, 
+  constructor(private builder: FormBuilder, private service: AssociateService, 
     private toastr: ToastrService) { }
   
   ngOnInit(): void {
@@ -30,23 +30,23 @@ export class AssociateComponent implements OnInit {
     id: this.builder.control(''),
     name: this.builder.control(''),
     address: this.builder.array([])
-  })
+  });
   
   saveAssociate() {
     // console.log(this.myform.value);
-    this.service.SaveAssociate(this.myform.value, this.myform.value.id).subscribe(r => {
+    this.service.saveAssociate(this.myform.value, this.myform.value.id).subscribe(r => {
       this.toastr.success('Saved.');
     });
   }
 
   loadAssociate() {
-    this.service.GetAssociate().subscribe(item => {
+    this.service.getAssociate().subscribe(item => {      
       this.associatellist = item;
     });
   }
   
   loadCountry() {
-    this.service.GetCountry().subscribe(item => {
+    this.service.getCountry().subscribe(item => {
       this.countrylist = item;
     });
   }
@@ -71,10 +71,11 @@ export class AssociateComponent implements OnInit {
     if (associate != '') {
       this.addressarray = this.myform.get("address") as FormArray;
       this.addressarray.push(this.createAddrow())
-    } else {      
+    } else {
       this.toastr.warning('Please choose associate');
     }
   }
+  
   createAddrow() {
     return this.builder.group({
       title: this.builder.control(''),
@@ -87,10 +88,9 @@ export class AssociateComponent implements OnInit {
     return this.myform.get("address") as FormArray;
   }
 
-  cusChange(code: any) {
-    this.service.GetAssociatebycode(code).subscribe(res => {
+  customerChange(code: any) {
+    this.service.getAssociatebycode(code).subscribe(res => {
       this.editdata = res;
-
       this.addressarray=this.myform.get("address") as FormArray;
       while (this.addressarray.length !== 0) {
         this.addressarray.removeAt(0)
@@ -103,4 +103,7 @@ export class AssociateComponent implements OnInit {
     });
   }
   
+  deleteAddress(index:number,code: any){
+    this.addressarray.removeAt(index);
+  }  
 }
