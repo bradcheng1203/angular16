@@ -1,3 +1,4 @@
+import { AssociateComponent } from './component/menubar/associate/associate.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './component/menubar/dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
@@ -23,8 +24,9 @@ const routes: Routes = [
     children:[      
       {path:'employee',component:EmployeeComponent},
       {path:'user',component:UserComponent},      
-      {path:'dashboard',component:DashboardComponent},      
-      {path:'slider',component:SliderComponent},
+      {path:'dashboard',component:DashboardComponent},
+      {path:'slider',component:SliderComponent},    
+      {path:'associate',component:AssociateComponent},
       {path:'table',component:TableComponent},
       {path:'input',component:InputComponent},
       {path:'autocomplete',component:AutocompleteComponent},

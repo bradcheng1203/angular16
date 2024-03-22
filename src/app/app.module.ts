@@ -23,6 +23,7 @@ import { UserComponent } from './component/menubar/user/user.component';
 import { UpdatepopupComponent } from './component/menubar/updatepopup/updatepopup.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AssociateComponent } from './component/menubar/associate/associate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     HomeComponent,    
     AutocompleteComponent, 
     CardComponent, 
-    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, RegisterComponent, NotfoundComponent,
+    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, RegisterComponent, NotfoundComponent, AssociateComponent,
   ],
   imports: [
     BrowserModule,

@@ -94,8 +94,8 @@
       "password": "Test@1234",
       "email": "te@in.com",
       "gender": "male",
-      "role": "user",
-      "isactive": false
+      "role": "tech",
+      "isactive": true
     },
     {
       "id": "ntuser",
@@ -189,6 +189,125 @@
       "phone": "",
       "status": true,
       "id": 6
+    }
+  ],
+  "employeetest": [
+    {
+      "id": "A00001",
+      "firstName": "aaaaaa",
+      "lastName": "bbbbbb",
+      "age": 30,
+      "gender": "male",
+      "education": "male",
+      "company": "kgt",
+      "taget": "taget000000",
+      "level": 3,
+      "records": [
+        {
+          "designName": "testname1",
+          "dateTime": "2024/02/01 18:00",
+          "output": "a1",
+          "score": 90,
+          "ispass": true
+        },
+        {
+          "designName": "testname2",
+          "dateTime": "2024/02/05 18:00",
+          "output": "b1",
+          "score": 60,
+          "ispass": false
+        }
+      ]
+    },
+    {
+      "id": "A00002",
+      "firstName": "aaaaaa",
+      "lastName": "bbbbbb",
+      "age": 30,
+      "gender": "male",
+      "education": "male",
+      "company": "kgt",
+      "taget": "taget000000",
+      "level": 3,
+      "records": [
+        {
+          "designName": "testname1",
+          "dateTime": "2024/02/01 18:00",
+          "output": "a1",
+          "score": 90,
+          "ispass": true
+        },
+        {
+          "designName": "testname2",
+          "dateTime": "2024/02/05 18:00",
+          "output": "b1",
+          "score": 60,
+          "ispass": false
+        }
+      ]
+    }
+  ],
+  "associate": [
+    {
+      "id": 1,
+      "name": "Ravi",
+      "address": [
+        {
+          "title": "Address11111",
+          "country": "England",
+          "fulladdress": "1st street,new nager,\nchennai"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kumar",
+      "address": [
+        {
+          "title": "kUmar address1",
+          "country": "Australia1",
+          "fulladdress": "Address 1"
+        },
+        {
+          "title": "Kumar address tilte",
+          "country": "England1",
+          "fulladdress": "Add 2"
+        },
+        {
+          "title": "3",
+          "country": "England1",
+          "fulladdress": "Address - 3 Title"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Akash",
+      "address": [
+        {
+          "title": "AAA",
+          "country": "AAAA",
+          "fulladdress": "Akash Address - 1"
+        }
+      ]
+    }
+  ],
+  "country": [
+    {
+      "code": "India",
+      "name": "India"
+    },
+    {
+      "code": "Australia",
+      "name": "Australia"
+    },
+    {
+      "code": "SouthAfrica",
+      "name": "SouthAfrica"
+    },
+    {
+      "code": "England",
+      "name": "England"
     }
   ]
 }

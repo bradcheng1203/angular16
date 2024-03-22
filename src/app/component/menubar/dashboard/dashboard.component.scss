@@ -1,7 +1,7 @@
 .main-body {
   padding-top: 20px;
   margin: 0 auto;
-  max-width: 1348px;
+  max-width: 1048px;
   mat-form-field {
     width: 100%;
   }
@@ -11,14 +11,22 @@
   }
 }
 
-.action {
+.content {
+  padding-top: 10px;
+}
+.row {
   display: flex;
-  gap: 5px;
+  gap: 50px;
+
+  mat-form-field {
+    width: 100%;
+  }
 }
 
-.card-class{
-  margin: 3%;
-  width: 18%;
-  text-align: left;
-  float: left;
+.action {  
+  padding: 0px 25px 20px; 
+  button {
+    margin-left: 50px !important;
+    width: 200px;     
+  }  
 }
