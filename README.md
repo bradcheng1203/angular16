@@ -232,23 +232,27 @@ ng g m menubar --routing
 
 ng g c employee
 
- { path:'menu',component:MenubarComponent,
-    children:[      
-       {path:'employee',component:EmployeeComponent},
-       {path:'autocomplete',component:AutocompleteComponent},
-       {path:'card',component:CardComponent},
-       {path:'', redirectTo:'card', pathMatch:'full' }
-    ]},  
-  { path:'emp',component:EmpAddEditComponent},
-  { path:'', redirectTo:'/login', pathMatch:'full' }
+/* 
+  displayTimer$ !:Observable<number>; 
   
-.number{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid maroon;
-  box-sizing: border-box;
-}
+  const idleTime$ = timer(0,1000);
+    const mouseMove$ = fromEvent<MouseEvent>(document, 'click');
+    
+    this.displayTimer$ = idleTime$.pipe(
+      takeUntil(mouseMove$),
+      repeat()
+     );    
+    
+    idleTime$.pipe(takeUntil(mouseMove$),repeat()).subscribe(time=>{      
+      console.log(time);      
+      if( time == 0 ){
+        console.log('OK');
+        //this.reset();
+        this.clearTimer();
+        this.remainingTime = this.seconds;
+        this.start();
+      }      
+}); */ 
 
 
   

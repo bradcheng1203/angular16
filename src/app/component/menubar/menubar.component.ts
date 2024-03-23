@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Input, OnDestroy, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, fromEvent, timer } from 'rxjs';
 import { takeUntil, repeat } from 'rxjs/operators';
 @Component({
@@ -7,19 +8,20 @@ import { takeUntil, repeat } from 'rxjs/operators';
   templateUrl: './menubar.component.html',
   styleUrls: ['./menubar.component.scss']
 })
-export class MenubarComponent  {
+export class MenubarComponent implements OnInit {
+  
+  constructor(private router: Router) {}
+  
   badgevisible = true;
   badgevisibility() {
-    //this.badgevisible = true;
+    this.badgevisible = true;
   }
   
   private intervalId = 0;
   message = '';
   remainingTime !: number;
   remainingTimeString !: string;
-  private _seconds = 70;
-  
-  displayTimer$ !:Observable<number>;  
+  private _seconds = 120;
   
   @Input()
   get seconds(): number {
@@ -36,35 +38,14 @@ export class MenubarComponent  {
   
   ngOnInit() {    
     this.reset();
-    this.start();
-    
-    /* const idleTime$ = timer(0,1000);
-    const mouseMove$ = fromEvent<MouseEvent>(document, 'click');
-    
-    this.displayTimer$ = idleTime$.pipe(
-      takeUntil(mouseMove$),
-      repeat()
-     );    
-    
-    idleTime$.pipe(takeUntil(mouseMove$),repeat()).subscribe(time=>{      
-      console.log(time);      
-      if( time == 0 ){
-        console.log('OK');
-        //this.reset();
-        this.clearTimer();
-        this.remainingTime = this.seconds;
-        this.start();
-      }      
-    }); */    
-    
+    this.start();    
     // window.addEventListener('keydown', (event) => {
     //   console.log('keydown called');      
-    // }); 
-    
+    // });
     window.addEventListener('mousedown', (event) => {
     //   console.log('mousedown called');
-       this.reset();  
-     });   
+       this.reset();
+    });   
   }
   
   ngOnDestroy() {
@@ -77,10 +58,12 @@ export class MenubarComponent  {
       this.remainingTime = this.seconds;
     }
   }
+  
   stop() {
     this.clearTimer();
     this.message = `Holding at T-${this.remainingTime} seconds`;
   }
+  
   reset() {
     this.clearTimer();
     this.remainingTime = this.seconds;
@@ -97,6 +80,7 @@ export class MenubarComponent  {
         //this.message = 'Blast off!';
         this.remainingTimeString = this.showTimer(this.remainingTime);
         this.clearTimer();
+        this.router.navigate(['login']);
       } else {        
         this.remainingTimeString = this.showTimer(this.remainingTime);
         //this.message = `T-${this.remainingTimeString} seconds and counting`;
