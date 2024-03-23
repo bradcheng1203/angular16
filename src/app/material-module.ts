@@ -22,6 +22,7 @@ import {MatDialogModule} from "@angular/material/dialog"
 import {MatGridListModule} from '@angular/material/grid-list'
 import {MatSnackBarModule } from "@angular/material/snack-bar";
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @NgModule({
 exports:[
     MatInputModule,
@@ -47,6 +48,7 @@ exports:[
     MatGridListModule,
     MatSnackBarModule,
     MatTabsModule,
+    MatTooltipModule,
 ]
 })
 export class MaterialModule{}

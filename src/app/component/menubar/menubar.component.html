@@ -34,7 +34,7 @@
   <button routerLink="input" mat-button>Input</button>
   <button routerLink="autocomplete" mat-button>Autocomplete</button>
   <button routerLink="/login" mat-button color="warn" >LogOut</button>
-  <div><span style="font-size:14px;" >{{ remainingTimeString }}</span></div>
+  <div><span matTooltip="remaining time to Logout" style="font-size:14px;" >{{ remainingTimeString }}</span></div>
   <!-- <a href="https://www.youtube.com/channel/UCsbmVmB_or8sVLLEq4XhE_A/join" mat-raised-button color="accent">Join Us</a> -->
   <button (click)="badgevisibility()"  mat-icon-button>
       <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible" matBadgeSize="small">notifications</mat-icon>

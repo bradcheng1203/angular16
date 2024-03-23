@@ -2,7 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { EmployeeService } from 'src/app/@services/employee.service';
 import { CoreService } from '../../core/core.service';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,61 +11,19 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  empForm: FormGroup;
-  
-  education: string[] = [
-    'Matric',
-    'Diploma',
-    'Intermediate',
-    'Graduate',
-    'Post Graduate',
-  ];
-  
-  data: any;
-  
   constructor(
     private _fb: FormBuilder,
     private _dialog: MatDialog,
     private _empService: EmployeeService,    
     private _coreService: CoreService 
-  ) {
-    this.empForm = this._fb.group({
-      firstName: '',
-      lastName: '',
-      email: '',
-      dob: '',
-      gender: '',
-      education: '',
-      company: '',
-      experience: '',
-      package: '',
-    });    
+  ) {  
   }
   
-  ngOnInit(): void {
-    this.data = {
-      "firstName": "Brinn",
-      "lastName": "Jephcote",
-      "email": "bjephcote0@archive.org",
-      "dob": "1981-10-05T12:09:39Z",
-      "gender": "Male",
-      "education": "Graduate",
-      "company": "Gabspot",
-      "experience": 4,
-      "package": 0.037,
-      "id": 1
-    };
-    
-    this.empForm.patchValue(this.data);
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
+  
+  ngOnInit(): void {    
   }
   
-  getEmployeeTest() {
-    if (this.empForm.valid) {
-      if (this.data) {
-        alert( this.data );
-      }else{
-        alert( this.data );
-      }      
-    }
-  }
+  
 }
