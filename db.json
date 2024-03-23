@@ -18,7 +18,7 @@
   },
   "employees": [
     {
-      "firstName": "BrinnAAA",
+      "firstName": "Brinn",
       "lastName": "Jephcote",
       "email": "bjephcote0@archive.org",
       "dob": "1981-10-05T12:09:39Z",
@@ -74,10 +74,7 @@
       "email": "test@gmail.com",
       "gender": "male",
       "role": "admin",
-      "isactive": true,
-      "address": {
-        "area": "chennai"
-      }
+      "isactive": true      
     },
     {
       "id": "testuser",
@@ -85,23 +82,14 @@
       "password": "Test@1234",
       "email": "test@in.com",
       "gender": "male",
-      "role": "user",
-      "isactive": true
-    },
-    {
-      "id": "Jhon1",
-      "name": "NT Infotech",
-      "password": "Test@1234",
-      "email": "te@in.com",
-      "gender": "male",
       "role": "tech",
       "isactive": true
-    },
+    },    
     {
-      "id": "ntuser",
-      "name": "ramesh",
+      "id": "jimmy",
+      "name": "Jimmy",
       "password": "Test@1234",
-      "email": "te@in.com",
+      "email": "jimmy@gmail.com",
       "gender": "male",
       "role": "user",
       "isactive": true
@@ -250,18 +238,23 @@
   "associate": [
     {
       "id": 1,
-      "name": "Ravi",
+      "name": "Jimmy",
       "address": [
         {
-          "title": "Address22",
-          "country": "England",
-          "fulladdress": "1st street,new nager"
+          "title": "Address",
+          "country": "Taiwan",
+          "fulladdress": "1st street"
+        },
+        {
+          "title": "Add2",
+          "country": "SouthKorea",
+          "fulladdress": "AAAAAA"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Kumar",
+      "name": "Tom",
       "address": [
         {
           "title": "kUmar address1",
@@ -271,38 +264,38 @@
         {
           "title": "Kumar address tilte",
           "country": "England1",
-          "fulladdress": "Add 2\nXzXzXzCCxC"
+          "fulladdress": "Add 2"
         }
       ]
     },
     {
       "id": 3,
-      "name": "Akash",
+      "name": "John",
       "address": [
         {
-          "title": "AAA",
-          "country": "BBBB",
-          "fulladdress": "Akash Address - 1"
+          "title": "jjjjj",
+          "country": "Japan",
+          "fulladdress": "john Address"
         }
       ]
     }
   ],
   "country": [
     {
-      "code": "India",
-      "name": "India"
+      "code": "Taiwan",
+      "name": "Taiwan"
     },
     {
-      "code": "Australia",
-      "name": "Australia"
+      "code": "China",
+      "name": "China"
     },
     {
-      "code": "SouthAfrica",
-      "name": "SouthAfrica"
+      "code": "Japan",
+      "name": "Japan"
     },
     {
-      "code": "England",
-      "name": "England"
+      "code": "SouthKorea",
+      "name": "SouthKorea"
     }
   ],
   "CustomerGetAll": [
