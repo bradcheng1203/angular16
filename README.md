@@ -188,11 +188,6 @@ ng g c frameset
 ng g m frameset --routing
 
 
-
-
-
-
-
 ==== Build CRUD Application   ==================================
 npx -p @angular/cli@15.0.0 ng new angular15
 ng new angular17

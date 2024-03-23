@@ -69,22 +69,22 @@
   "user": [
     {
       "id": "admin",
-      "name": "NT Infotech",
+      "name": "AdminUser",
       "password": "Test@1234",
       "email": "test@gmail.com",
       "gender": "male",
       "role": "admin",
-      "isactive": true      
+      "isactive": true
     },
     {
       "id": "testuser",
       "name": "Test User",
       "password": "Test@1234",
-      "email": "test@in.com",
+      "email": "test123@gmail.com",
       "gender": "male",
       "role": "tech",
       "isactive": true
-    },    
+    },
     {
       "id": "jimmy",
       "name": "Jimmy",
@@ -244,11 +244,6 @@
           "title": "Address",
           "country": "Taiwan",
           "fulladdress": "1st street"
-        },
-        {
-          "title": "Add2",
-          "country": "SouthKorea",
-          "fulladdress": "AAAAAA"
         }
       ]
     },
@@ -260,11 +255,6 @@
           "title": "kUmar address1",
           "country": "England",
           "fulladdress": "Address 1"
-        },
-        {
-          "title": "Kumar address tilte",
-          "country": "England1",
-          "fulladdress": "Add 2"
         }
       ]
     },
@@ -273,7 +263,7 @@
       "name": "John",
       "address": [
         {
-          "title": "jjjjj",
+          "title": "JohnJohn",
           "country": "Japan",
           "fulladdress": "john Address"
         }

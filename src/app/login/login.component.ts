@@ -35,7 +35,7 @@ export class LoginComponent {
             sessionStorage.setItem('username',this.result.id);
             sessionStorage.setItem('role',this.result.role);
             this.router.navigate(['menu']);
-            this.toastr.success('Log In successfully.');
+            //this.toastr.success('Log In successfully.');
           } else {
             this.toastr.error('Please contact Admin', 'InActive User');
           }

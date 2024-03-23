@@ -13,9 +13,9 @@ import { TableComponent } from './component/menubar/table/table.component';
 import { InputComponent } from './component/menubar/input/input.component';
 import { LoginComponent } from './login/login.component';
 import { AutocompleteComponent } from './component/menubar/autocomplete/autocomplete.component';
-import { authGuard } from './@guard/auth.guard';
 import { UserComponent } from './component/menubar/user/user.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AuthGuard } from './@guard/auth.guard';
 
 const routes: Routes = [  
   {path:'login',component:LoginComponent},
@@ -31,7 +31,7 @@ const routes: Routes = [
       {path:'input',component:InputComponent},
       {path:'autocomplete',component:AutocompleteComponent},
       {path:'', redirectTo:'dashboard', pathMatch:'full' }
-    ],canActivate:[authGuard]
+    ],canActivate:[AuthGuard]
   },
   {path:'', redirectTo:'login', pathMatch:'full' },
   {path:'**', component:NotfoundComponent }
