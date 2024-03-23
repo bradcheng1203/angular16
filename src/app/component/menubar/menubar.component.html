@@ -34,6 +34,7 @@
   <button routerLink="input" mat-button>Input</button>
   <button routerLink="autocomplete" mat-button>Autocomplete</button>
   <button routerLink="/login" mat-button color="warn" >LogOut</button>
+  <div><span style="font-size:14px;" >{{ remainingTimeString }}</span></div>
   <!-- <a href="https://www.youtube.com/channel/UCsbmVmB_or8sVLLEq4XhE_A/join" mat-raised-button color="accent">Join Us</a> -->
   <button (click)="badgevisibility()"  mat-icon-button>
       <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible" matBadgeSize="small">notifications</mat-icon>
@@ -70,6 +71,15 @@
   </mat-drawer>
   <mat-drawer-content>
       <div style="text-align: center;min-height: 600px;">
+          <div>{{displayTimer$ | async}}</div>
+          <div class="group-actions">
+            <button (click)="start()">Start</button>
+            <button (click)="stop()">Stop</button>
+            <button (click)="reset()">Reset</button>
+          </div> 
+          <div class="timer">
+            <span class="timer-text">{{ remainingTimeString }} </span>
+          </div>  
           <router-outlet></router-outlet>
       </div>
   </mat-drawer-content>

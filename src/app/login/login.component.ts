@@ -10,7 +10,7 @@ import { AuthService } from '../@services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  
+   
   constructor(private builder: FormBuilder, private toastr: ToastrService, private service: AuthService,
     private router: Router) {      
       if(sessionStorage.getItem('username')!=null){
@@ -22,8 +22,8 @@ export class LoginComponent {
   result: any;
   
   loginform = this.builder.group({
-    id: this.builder.control('', Validators.required),
-    password: this.builder.control('', Validators.required)
+    id: this.builder.control('admin', Validators.required),
+    password: this.builder.control('Test@1234', Validators.required)
   });
 
   proceedlogin() {
