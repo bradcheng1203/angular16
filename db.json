@@ -25,7 +25,7 @@
       "gender": "Male",
       "education": "Graduate",
       "company": "Gabspot",
-      "experience": 4,
+      "experience": 5,
       "package": 0.037,
       "id": 1
     },
@@ -37,7 +37,7 @@
       "gender": "Male",
       "education": "Matric",
       "company": "Agivu",
-      "experience": 43,
+      "experience": 30,
       "package": 17,
       "id": 2
     },
@@ -61,8 +61,8 @@
       "gender": "Male",
       "education": "Diploma",
       "company": "GG",
-      "experience": 3,
-      "package": 4,
+      "experience": 6,
+      "package": 12,
       "id": 4
     }
   ],
@@ -74,10 +74,7 @@
       "email": "test@gmail.com",
       "gender": "male",
       "role": "admin",
-      "isactive": true,
-      "address": {
-        "area": "chennai"
-      }
+      "isactive": true      
     },
     {
       "id": "testuser",
@@ -85,23 +82,14 @@
       "password": "Test@1234",
       "email": "test@in.com",
       "gender": "male",
-      "role": "user",
-      "isactive": true
-    },
-    {
-      "id": "Jhon1",
-      "name": "NT Infotech",
-      "password": "Test@1234",
-      "email": "te@in.com",
-      "gender": "male",
       "role": "tech",
       "isactive": true
-    },
+    },    
     {
-      "id": "ntuser",
-      "name": "ramesh",
+      "id": "jimmy",
+      "name": "Jimmy",
       "password": "Test@1234",
-      "email": "te@in.com",
+      "email": "jimmy@gmail.com",
       "gender": "male",
       "role": "user",
       "isactive": true
@@ -250,18 +238,23 @@
   "associate": [
     {
       "id": 1,
-      "name": "Ravi",
+      "name": "Jimmy",
       "address": [
         {
-          "title": "Address22",
-          "country": "England",
-          "fulladdress": "1st street,new nager"
+          "title": "Address",
+          "country": "Taiwan",
+          "fulladdress": "1st street"
+        },
+        {
+          "title": "Add2",
+          "country": "SouthKorea",
+          "fulladdress": "AAAAAA"
         }
       ]
     },
     {
       "id": 2,
-      "name": "Kumar",
+      "name": "Tom",
       "address": [
         {
           "title": "kUmar address1",
@@ -277,60 +270,60 @@
     },
     {
       "id": 3,
-      "name": "Akash",
+      "name": "John",
       "address": [
         {
-          "title": "AAA",
-          "country": "AAAA",
-          "fulladdress": "Akash Address - 1"
+          "title": "jjjjj",
+          "country": "Japan",
+          "fulladdress": "john Address"
         }
       ]
     }
   ],
   "country": [
     {
-      "code": "India",
-      "name": "India"
+      "code": "Taiwan",
+      "name": "Taiwan"
     },
     {
-      "code": "Australia",
-      "name": "Australia"
+      "code": "China",
+      "name": "China"
     },
     {
-      "code": "SouthAfrica",
-      "name": "SouthAfrica"
+      "code": "Japan",
+      "name": "Japan"
     },
     {
-      "code": "England",
-      "name": "England"
+      "code": "SouthKorea",
+      "name": "SouthKorea"
     }
   ],
   "CustomerGetAll": [
     {
       "id": 1,
       "name": "rakhesh",
-      "code":"1001",
+      "code": "1001",
       "Creditlimit": 1000,
-      "address":"address123"
+      "address": "address123"
     },
     {
       "id": 2,
       "name": "rahul",
-      "code":"1002",
+      "code": "1002",
       "Creditlimit": 1000,
-      "address":"address234"
+      "address": "address234"
     }
   ],
-  "ProductGetAll":[
+  "ProductGetAll": [
     {
-      "id": 1 ,
+      "id": 1,
       "code": "India",
       "name": "India"
     },
     {
-      "id": 2 ,
+      "id": 2,
       "code": "Australia",
       "name": "Australia"
-    }    
+    }
   ]
 }

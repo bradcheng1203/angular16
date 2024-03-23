@@ -17,11 +17,18 @@ a{
   padding: 1%;
 }
 
-.center {
-  margin: auto;
-  width: 40%;
-  //border: 1px solid #73AD21;
+
+.center{
+  // display: flex;
+  /* 水平置中 */
+  // justify-content: center;    
+  /* 垂直置中 */
+  align-content: center;     
+  flex-wrap: wrap;
+  //margin: auto;
+  width: 85%;
+  // border: 1px solid #73AD21;
   //padding: 100px 0;
   padding: 5%;
+  min-height: 20em ;
 }
-

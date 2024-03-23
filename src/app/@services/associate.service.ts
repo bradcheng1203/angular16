@@ -18,8 +18,7 @@ export class AssociateService {
     return this.http.get('http://localhost:3000/associate/'+code);
   }
   
-  getCountry():Observable<Country[]>{
-    console.log( 'getCountry' );
+  getCountry():Observable<Country[]>{    
     return this.http.get<Country[]>('http://localhost:3000/country');
   }
 
