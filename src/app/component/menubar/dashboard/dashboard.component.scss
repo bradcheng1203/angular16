@@ -7,7 +7,7 @@
     width: 100%;
   }
   .pr{
-    width: 85% ;
+    width: 30% ;
     padding-right: 50px;
   }
 }
@@ -25,9 +25,10 @@
 }
 
 .action {
-  padding: 0px 25px 20px;
+  padding: 40px 25px 20px;
   button {
     flex: 1;
+    min-width: 100px;
   }
 }
 

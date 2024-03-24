@@ -147,17 +147,22 @@
   ],
   "customer": [
     {
-      "fullName": "aaaaa",
-      "accountNumber": "AAAAAAAAA",
+      "fullName": "firstname",
+      "accountNumber": "account",
       "birthDay": "2024-03-12T16:00:00.000Z",
       "homeAddress": "address",
       "homeCityStateZipCode": "235",
-      "homeTelephoneNumber": "0927000000",
+      "homeTelephoneNumber": "0912000888",
       "emailAddress": "bradcheng1203@gmail.com",
-      "education": "研究所",
+      "education": "博士",
       "experience": 5,
       "package": 5,
-      "gender": "Male",
+      "gender": "Female",
+      "markets": [
+        "market 1",
+        "market 2",
+        "market 3"
+      ],
       "id": 1
     }
   ],
@@ -226,6 +231,11 @@
           "title": "Address",
           "country": "China",
           "fulladdress": "1st street"
+        },
+        {
+          "title": "Add2",
+          "country": "Taiwan",
+          "fulladdress": "aaaaaa"
         }
       ]
     },

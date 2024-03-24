@@ -10,3 +10,8 @@ export interface Country{
     code:string,
     name:string
 }
+
+export interface Food {
+  value: string;
+  viewValue: string;  
+}

@@ -1,4 +1,3 @@
-    
 <div class="main-body">
   <div mat-dialog-title>
     <h1>Customer Form</h1>
@@ -17,7 +16,7 @@
             <mat-form-field appearance="outline">
               <mat-label>Date of birth</mat-label>
               <input matInput [matDatepicker]="picker" formControlName="birthDay">
-              <mat-hint>YYYY/MM/DD</mat-hint>
+              <mat-hint>MM/DD/YYYY</mat-hint>
               <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -44,7 +43,7 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Education</mat-label>
-              <mat-select formControlName="education">
+              <mat-select formControlName="education" >
                   <mat-option *ngFor="let val of education" [value]="val">{{val}}
                   </mat-option>
               </mat-select>
@@ -58,19 +57,25 @@
               <input matInput placeholder="Ex. 4" type="number" formControlName="package">
               <mat-hint>In rupees</mat-hint>
             </mat-form-field>
-        </div>
+        </div>        
         <div class="row">
-            <mat-radio-group aria-label="Select an option" formControlName="gender">
+            <mat-radio-group aria-label="Select an option" formControlName="gender" class="pr">
                 <mat-label><b>Gender</b></mat-label>
                 <mat-radio-button value="Male">Male</mat-radio-button>
                 <mat-radio-button value="Female">Female</mat-radio-button>
                 <mat-radio-button value="Others">Others</mat-radio-button>
             </mat-radio-group>
+            <mat-form-field appearance="outline" class="pr">
+              <mat-label>Global Markets</mat-label>
+              <mat-select formControlName="markets" multiple >
+                 <mat-option *ngFor="let val of markets" [value]="val">{{val}}
+                 </mat-option>
+              </mat-select>
+            </mat-form-field>
         </div>
     </div>
-    <div mat-dialog-actions class="action">
-        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
-        <button mat-raised-button color="primary" type="submit">Save</button>
+    <div mat-dialog-actions class="action">        
+        <button mat-raised-button color="primary" type="submit"> Save</button>
     </div>
   </form>
 </div>

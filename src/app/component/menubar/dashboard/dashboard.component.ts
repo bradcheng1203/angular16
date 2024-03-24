@@ -4,6 +4,7 @@ import { EmployeeService } from 'src/app/@services/employee.service';
 import { CoreService } from '../../core/core.service';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
+import { Food } from 'src/app/@model/Customer';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,12 +15,28 @@ export class DashboardComponent implements OnInit {
   empForm: FormGroup;
   editdata: any;
   
+  education: string[] = [
+    '博士',
+    '研究所',
+    '大學',
+    '專科',    
+    '普通高中',    
+  ];
+  
+  markets: string[] = [
+    'market 1',
+    'market 2',
+    'market 3',
+    'market 4'
+  ];  
+  
   constructor(
     private _fb: FormBuilder,
     private _dialog: MatDialog,
     private _empService: EmployeeService,    
     private _coreService: CoreService 
   ) {
+    
     this.empForm = this._fb.group({
       fullName : '',
       accountNumber: '',      
@@ -31,29 +48,17 @@ export class DashboardComponent implements OnInit {
       education: '',
       experience: '', 
       package: '', 
-      gender:'',      
+      gender:'',
+      markets : ''
     });
+    
   }   
   
   ngOnInit(): void {
     this._empService.getCusrtmerById(1).subscribe(res=>{
-      this.editdata = res;      
-      console.log(this.editdata);      
+      this.editdata = res;
       this.empForm.patchValue(this.editdata);
-      
-      // this.empForm.setValue({ 
-      //   fullName: this.editdata.fullName ,
-      //   accountNumber: '',      
-      //   birthDay: '',
-      //   homeAddress: '',
-      //   homeCityStateZipCode: '',
-      //   homeTelephoneNumber: '',
-      //   emailAddress: '',
-      //   education: '',
-      //   experience: '', 
-      //   package: '', 
-      //   gender:'',
-      //   });
+      console.log(this.empForm.value);      
     })
   }
   
@@ -69,36 +74,8 @@ export class DashboardComponent implements OnInit {
         },
       });
     }
-  }
+  } 
   
-  education: string[] = [
-    '博士',
-    '研究所',
-    '大學',
-    '專科',    
-    '普通高中',    
-  ]; 
   
-  occupation: string[] = [
-    '水泥',
-    '食品',
-    '金融',
-    '科技',    
-    '塑膠',    
-  ];  
   
-  investmentObjective: string[] = [
-    'CapitalPreservation',
-    'Income',
-    'Growth',
-    'Speculation',
-    'Other'
-  ];
-  
-  investmentExperience: string[] = [
-    'None',
-    'Limited',
-    'Good',
-    'Extensive'
-  ];
 }
