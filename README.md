@@ -200,10 +200,7 @@ json-server --watch db.json
 
 ng g s services/employee
 
-
 npm i -g json-server@0.17.4
-
-
 
 
 npx -p @angular/cli@16.1.0 ng new angular16
@@ -249,5 +246,19 @@ ng g c employee
       }      
 }); */ 
 
+"id": 1 ,          
+"fullName": "aaaaa",
+"accountNumber": "",     
+"birthDay": "",
+"homeAddress": "",
+"homeCityStateZipCode": "",
+"homeTelephoneNumber": "",
+"emailAddress": "",
+"education": "",
+"gender":"",      
+"experience": 3, 
+"package": 3,       
+"investmentObjective": "" ,
+"investmentExperience": ""
 
-  
+

@@ -17,7 +17,7 @@
             <mat-form-field appearance="outline">
               <mat-label>Date of birth</mat-label>
               <input matInput [matDatepicker]="picker" formControlName="birthDay">
-              <mat-hint>YYYY/MM/DD</mat-hint>
+              <mat-hint>MM/DD/YYYY</mat-hint>
               <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -26,15 +26,15 @@
         <div class="row">
           <mat-form-field appearance="outline">
               <mat-label>Home Address</mat-label>
-              <input matInput type="text" placeholder="Home Address" formControlName="homeAddress">
+              <input matInput type="text" placeholder="Ex. Technical" formControlName="homeAddress">
           </mat-form-field>
           <mat-form-field appearance="outline">
-              <mat-label>City/State/ZipCode</mat-label>
-              <input matInput placeholder="City/State/ZipCode" formControlName="homeCityStateZipCode">
+              <mat-label>City/State/Zip Code</mat-label>
+              <input matInput placeholder="Ex. Babaji" formControlName="homeCityStateZipCode">
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Telephone Number</mat-label>
-            <input matInput placeholder="Telephone Number" formControlName="homeTelephoneNumber">
+            <input matInput placeholder="Ex. Babaji" formControlName="homeTelephoneNumber">
           </mat-form-field>
         </div>
         <div class="row">
@@ -55,7 +55,7 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Package</mat-label>
-              <input matInput placeholder="Ex. 4" type="number" formControlName="package">
+              <input matInput placeholder="Ex. 12" type="number" formControlName="package">
               <mat-hint>In rupees</mat-hint>
             </mat-form-field>
         </div>

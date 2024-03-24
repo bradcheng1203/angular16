@@ -18,7 +18,7 @@
   },
   "employees": [
     {
-      "firstName": "Brinn",
+      "firstName": "BrinnA",
       "lastName": "Jephcote",
       "email": "bjephcote0@archive.org",
       "dob": "1981-10-05T12:09:39Z",
@@ -147,36 +147,18 @@
   ],
   "customer": [
     {
-      "id": 1,
-      "name": "rakhesh",
-      "Creditlimit": 1000
-    },
-    {
-      "id": 2,
-      "name": "rahul",
-      "Creditlimit": 1000
-    },
-    {
-      "id": 3,
-      "name": "ramesh",
-      "Creditlimit": 1000
-    },
-    {
-      "id": 4,
-      "name": "rahim",
-      "Creditlimit": 1000
-    },
-    {
-      "id": 5,
-      "name": "robert",
-      "Creditlimit": 1000
-    },
-    {
-      "name": "AAAA",
-      "email": "AAA",
-      "phone": "",
-      "status": true,
-      "id": 6
+      "fullName": "aaaaa",
+      "accountNumber": "AAAAAAAAA",
+      "birthDay": "2024-03-12T16:00:00.000Z",
+      "homeAddress": "address",
+      "homeCityStateZipCode": "235",
+      "homeTelephoneNumber": "0927000000",
+      "emailAddress": "bradcheng1203@gmail.com",
+      "education": "研究所",
+      "experience": 5,
+      "package": 5,
+      "gender": "Male",
+      "id": 1
     }
   ],
   "employeetest": [

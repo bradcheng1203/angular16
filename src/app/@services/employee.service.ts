@@ -27,4 +27,13 @@ export class EmployeeService {
   getEmployeeTestResult(empid: string): Observable<any> {
     return this._http.get(`http://localhost:3000/testresult/${empid}` );
   }
+  
+  updateCustomer(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/customer/${id}`, data);
+  }
+  
+  getCusrtmerById(id: number): Observable<any> {
+    return this._http.get(`http://localhost:3000/customer/${id}`);
+  }
+  
 }
