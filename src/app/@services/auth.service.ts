@@ -57,6 +57,7 @@ export class AuthService {
       errorMessage = `Backend returned code ${error.status}, body was: ` + error.error.split('\n', 1)[0];      
     }
     // Return an observable with a user-facing error message.
+    //return throwError(() => new Error('Something bad happened; please try again later.'));
     return throwError(() => new Error(errorMessage));
   }
 }
