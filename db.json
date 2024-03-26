@@ -25,7 +25,7 @@
   ],
   "profile": {
     "name": "typicode"
-  },  
+  },
   "user": [
     {
       "id": "admin",
@@ -176,7 +176,7 @@
   "customer": [
     {
       "fullname": "Chetan Jogi",
-      "accountnumber": "account",
+      "accountnumber": "accountName",
       "birthday": "2024-03-12T16:00:00.000Z",
       "homeaddress": "address",
       "homecitystatezipcode": "235",
@@ -185,7 +185,7 @@
       "education": "研究所",
       "experience": 5,
       "package": 5,
-      "gender": "Female",
+      "gender": "Male",
       "markets": [
         "market 1",
         "market 2",
