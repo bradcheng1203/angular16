@@ -167,13 +167,14 @@
       "education": "研究所",
       "experience": 5,
       "package": 5,
-      "gender": "Male",
+      "gender": "Female",
       "markets": [
         "market 1",
         "market 2",
         "market 3"
       ],
-      "id": 1    }
+      "id": 1
+    }
   ],
   "employeedetail": [
     {
