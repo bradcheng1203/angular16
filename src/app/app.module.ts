@@ -31,7 +31,9 @@ import { AssociateComponent } from './component/menubar/associate/associate.comp
     HomeComponent,    
     AutocompleteComponent, 
     CardComponent, 
-    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, RegisterComponent, NotfoundComponent, AssociateComponent,
+    EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, 
+    DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, 
+    RegisterComponent, NotfoundComponent, AssociateComponent,
   ],
   imports: [
     BrowserModule,

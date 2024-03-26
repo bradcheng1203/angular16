@@ -12,8 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class RegisterComponent {
   constructor(private builder: FormBuilder, private service: AuthService, private router: Router,
     private toastr: ToastrService) {
-
-  }
+  }  
 
   registerform = this.builder.group({
     id: this.builder.control('', Validators.compose([Validators.required, Validators.minLength(5)])),
@@ -24,11 +23,17 @@ export class RegisterComponent {
     role: this.builder.control('user'),
     isactive: this.builder.control(false)
   });
-  proceedregister() {
+  
+  proceedregister() {    
+    console.log(this.registerform.value);
     if (this.registerform.valid) {
-      this.service.RegisterUser(this.registerform.value).subscribe(result => {
+      this.service.RegisterUser(this.registerform.value).subscribe(result => {         
+        const item = result;
         this.toastr.success('Please contact admin for enable access.','Registered successfully')
-        this.router.navigate(['login'])
+        this.router.navigate(['login'])      
+      },
+      error => {         
+        this.toastr.error( error,'', {timeOut: 5000} );
       });
     } else {
       this.toastr.warning('Please enter valid data.')
