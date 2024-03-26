@@ -16,8 +16,8 @@ export class EmployeeComponent implements OnInit {
   title="";
   displayedColumns: string[] = [
     'id',
-    'firstName',
-    'lastName',
+    'firstname',
+    'lastname',
     'email',
     'dob',
     'gender',

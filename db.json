@@ -25,57 +25,7 @@
   ],
   "profile": {
     "name": "typicode"
-  },
-  "employees": [
-    {
-      "firstname": "BrinnA",
-      "lastname": "Jephcote",
-      "email": "bjephcote0@archive.org",
-      "dob": "1981-10-05T12:09:39Z",
-      "gender": "Male",
-      "education": "Graduate",
-      "company": "Gabspot",
-      "experience": 5,
-      "package": 5,
-      "id": 1
-    },
-    {
-      "firstname": "Kenneth",
-      "lastname": "MacElholm",
-      "email": "kmacelholm1@sina.com.cn",
-      "dob": "1991-09-12T22:14:02Z",
-      "gender": "Male",
-      "education": "Matric",
-      "company": "Agivu",
-      "experience": 30,
-      "package": 5,
-      "id": 2
-    },
-    {
-      "firstname": "Kimmy",
-      "lastname": "Penniall",
-      "email": "kpenniall2@biblegateway.com",
-      "dob": "1980-05-19T08:23:30Z",
-      "gender": "Male",
-      "education": "Graduate",
-      "company": "Mycat",
-      "experience": 45,
-      "package": 17,
-      "id": 3
-    },
-    {
-      "firstname": "Wendy",
-      "lastname": "Tom",
-      "email": "cheng@gmail.com",
-      "dob": "2024-03-21T16:00:00.000Z",
-      "gender": "Male",
-      "education": "Diploma",
-      "company": "GG",
-      "experience": 6,
-      "package": 12,
-      "id": 4
-    }
-  ],
+  },  
   "user": [
     {
       "id": "admin",
@@ -153,6 +103,74 @@
       "haveedit": true,
       "haveadd": true,
       "havedelete": false
+    }
+  ],
+  "country": [
+    {
+      "code": "Taiwan",
+      "name": "Taiwan"
+    },
+    {
+      "code": "China",
+      "name": "China"
+    },
+    {
+      "code": "Japan",
+      "name": "Japan"
+    },
+    {
+      "code": "SouthKorea",
+      "name": "SouthKorea"
+    }
+  ],
+  "employees": [
+    {
+      "firstname": "BrinnAAA",
+      "lastname": "Jephcote",
+      "email": "bjephcote0@archive.org",
+      "dob": "1981-10-05T12:09:39Z",
+      "gender": "Male",
+      "education": "Graduate",
+      "company": "Gabspot",
+      "experience": 5,
+      "package": 5,
+      "id": 1
+    },
+    {
+      "firstname": "Kenneth",
+      "lastname": "MacElholm",
+      "email": "kmacelholm1@sina.com.cn",
+      "dob": "1991-09-12T22:14:02Z",
+      "gender": "Male",
+      "education": "Matric",
+      "company": "Agivu",
+      "experience": 30,
+      "package": 5,
+      "id": 2
+    },
+    {
+      "firstname": "Kimmy",
+      "lastname": "Penniall",
+      "email": "kpenniall2@biblegateway.com",
+      "dob": "1980-05-19T08:23:30Z",
+      "gender": "Male",
+      "education": "Graduate",
+      "company": "Mycat",
+      "experience": 6,
+      "package": 17,
+      "id": 3
+    },
+    {
+      "firstname": "Wendy",
+      "lastname": "Tom",
+      "email": "cheng@gmail.com",
+      "dob": "2024-03-21T16:00:00.000Z",
+      "gender": "Male",
+      "education": "Diploma",
+      "company": "GG",
+      "experience": 6,
+      "package": 12,
+      "id": 4
     }
   ],
   "customer": [
@@ -275,24 +293,6 @@
           "fulladdress": "john Address"
         }
       ]
-    }
-  ],
-  "country": [
-    {
-      "code": "Taiwan",
-      "name": "Taiwan"
-    },
-    {
-      "code": "China",
-      "name": "China"
-    },
-    {
-      "code": "Japan",
-      "name": "Japan"
-    },
-    {
-      "code": "SouthKorea",
-      "name": "SouthKorea"
     }
   ]
 }
