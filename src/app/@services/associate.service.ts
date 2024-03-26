@@ -10,23 +10,25 @@ export class AssociateService {
 
   constructor(private http: HttpClient) { }
   
+  apiurl='http://localhost:3000';  
+  
   getAssociate(){
-    return this.http.get('http://localhost:3000/associate');
+    return this.http.get(this.apiurl+'/associate');
   }
   
   getAssociatebycode(code:any){    
-    return this.http.get('http://localhost:3000/associate/'+code);
+    return this.http.get(this.apiurl+'/associate/'+code);
   }
   
   getCountry():Observable<Country[]>{    
-    return this.http.get<Country[]>('http://localhost:3000/country');
+    return this.http.get<Country[]>(this.apiurl+'/country');
   }
 
   saveAssociate(data:any,code:any){    
-    return this.http.put('http://localhost:3000/associate/'+code,data);
+    return this.http.put(this.apiurl+'/associate/'+code,data);
   }
   
   deleteAssociate(data:any,code:any){    
-    return this.http.delete('http://localhost:3000/associate/'+code,data);
-  }  
+    return this.http.delete(this.apiurl+'/associate/'+code,data);
+  }
 }

@@ -8,9 +8,19 @@
   ],
   "comments": [
     {
-      "id": "1",
+      "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "id": 2,
+      "body": "some",
+      "postId": 3
+    },
+    {
+      "id": 3,
+      "body": "some",
+      "postId": 3
     }
   ],
   "profile": {
@@ -18,32 +28,32 @@
   },
   "employees": [
     {
-      "firstName": "BrinnA",
-      "lastName": "Jephcote",
+      "firstname": "BrinnA",
+      "lastname": "Jephcote",
       "email": "bjephcote0@archive.org",
       "dob": "1981-10-05T12:09:39Z",
       "gender": "Male",
       "education": "Graduate",
       "company": "Gabspot",
       "experience": 5,
-      "package": 0.037,
+      "package": 5,
       "id": 1
     },
     {
-      "firstName": "Kenneth",
-      "lastName": "MacElholm",
+      "firstname": "Kenneth",
+      "lastname": "MacElholm",
       "email": "kmacelholm1@sina.com.cn",
       "dob": "1991-09-12T22:14:02Z",
       "gender": "Male",
       "education": "Matric",
       "company": "Agivu",
       "experience": 30,
-      "package": 17,
+      "package": 5,
       "id": 2
     },
     {
-      "firstName": "Kimmy",
-      "lastName": "Penniall",
+      "firstname": "Kimmy",
+      "lastname": "Penniall",
       "email": "kpenniall2@biblegateway.com",
       "dob": "1980-05-19T08:23:30Z",
       "gender": "Male",
@@ -54,8 +64,8 @@
       "id": 3
     },
     {
-      "firstName": "Wendy",
-      "lastName": "Tom",
+      "firstname": "Wendy",
+      "lastname": "Tom",
       "email": "cheng@gmail.com",
       "dob": "2024-03-21T16:00:00.000Z",
       "gender": "Male",
@@ -82,7 +92,7 @@
       "password": "Test@1234",
       "email": "test123@gmail.com",
       "gender": "male",
-      "role": "user",
+      "role": "tech",
       "isactive": true
     },
     {
@@ -147,29 +157,30 @@
   ],
   "customer": [
     {
-      "fullName": "firstname",
-      "accountNumber": "account",
-      "birthDay": "2024-03-12T16:00:00.000Z",
-      "homeAddress": "address",
-      "homeCityStateZipCode": "235",
-      "homeTelephoneNumber": "0912000888",
-      "emailAddress": "andy@gmail.com",
-      "education": "大學",
+      "fullname": "Chetan Jogi",
+      "accountnumber": "account",
+      "birthday": "2024-03-12T16:00:00.000Z",
+      "homeaddress": "address",
+      "homecitystatezipCode": "235",
+      "hometelephonenumber": "0912000888",
+      "emailaddress": "andy@gmail.com",
+      "education": "研究所",
       "experience": 5,
       "package": 5,
       "gender": "Male",
       "markets": [
         "market 1",
-        "market 2"
+        "market 2",
+        "market 3"
       ],
       "id": 1
     }
   ],
-  "employeetest": [
+  "employeedetail": [
     {
       "id": "A00001",
-      "firstName": "aaaaaa",
-      "lastName": "bbbbbb",
+      "firstname": "aaaaaa",
+      "lastname": "bbbbbb",
       "age": 30,
       "gender": "male",
       "education": "male",
@@ -178,14 +189,14 @@
       "level": 3,
       "records": [
         {
-          "designName": "testname1",
+          "designname": "testname1",
           "dateTime": "2024/02/01 18:00",
           "output": "a1",
           "score": 90,
           "ispass": true
         },
         {
-          "designName": "testname2",
+          "designname": "testname2",
           "dateTime": "2024/02/05 18:00",
           "output": "b1",
           "score": 60,
@@ -195,8 +206,8 @@
     },
     {
       "id": "A00002",
-      "firstName": "aaaaaa",
-      "lastName": "bbbbbb",
+      "firstname": "aaaaaa",
+      "lastname": "bbbbbb",
       "age": 30,
       "gender": "male",
       "education": "male",
@@ -205,14 +216,14 @@
       "level": 3,
       "records": [
         {
-          "designName": "testname1",
+          "designname": "testname1",
           "dateTime": "2024/02/01 18:00",
           "output": "a1",
           "score": 90,
           "ispass": true
         },
         {
-          "designName": "testname2",
+          "designname": "testname2",
           "dateTime": "2024/02/05 18:00",
           "output": "b1",
           "score": 60,
@@ -246,6 +257,11 @@
           "title": "kUmar address1",
           "country": "England",
           "fulladdress": "Address 1"
+        },
+        {
+          "title": "Teeeee",
+          "country": "Taiwan",
+          "fulladdress": "Add"
         }
       ]
     },
@@ -277,34 +293,6 @@
     {
       "code": "SouthKorea",
       "name": "SouthKorea"
-    }
-  ],
-  "CustomerGetAll": [
-    {
-      "id": 1,
-      "name": "rakhesh",
-      "code": "1001",
-      "Creditlimit": 1000,
-      "address": "address123"
-    },
-    {
-      "id": 2,
-      "name": "rahul",
-      "code": "1002",
-      "Creditlimit": 1000,
-      "address": "address234"
-    }
-  ],
-  "ProductGetAll": [
-    {
-      "id": 1,
-      "code": "India",
-      "name": "India"
-    },
-    {
-      "id": 2,
-      "code": "Australia",
-      "name": "Australia"
     }
   ]
 }

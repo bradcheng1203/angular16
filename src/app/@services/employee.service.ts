@@ -7,33 +7,30 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
   constructor(private _http: HttpClient) {}
-
+  
+  apiurl='http://localhost:3000';  
+  
   addEmployee(data: any): Observable<any> {
-    return this._http.post('http://localhost:3000/employees', data);
+    return this._http.post(this.apiurl+'/employees', data);
   }
 
   updateEmployee(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/employees/${id}`, data);
+    return this._http.put(this.apiurl+`/employees/${id}`, data);
   }
 
   getEmployeeList(): Observable<any> {
-    return this._http.get('http://localhost:3000/employees');
+    return this._http.get(this.apiurl+'/employees');
   }
 
   deleteEmployee(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:3000/employees/${id}`);
-  }
-  
-  getEmployeeTestResult(empid: string): Observable<any> {
-    return this._http.get(`http://localhost:3000/testresult/${empid}` );
+    return this._http.delete(this.apiurl+`/employees/${id}`);
   }
   
   updateCustomer(id: number, data: any): Observable<any> {
-    return this._http.put(`http://localhost:3000/customer/${id}`, data);
+    return this._http.put(this.apiurl+`/customer/${id}`, data);
   }
   
   getCusrtmerById(id: number): Observable<any> {
-    return this._http.get(`http://localhost:3000/customer/${id}`);
+    return this._http.get(this.apiurl+`/customer/${id}`);
   }
-  
 }
