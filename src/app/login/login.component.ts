@@ -14,9 +14,9 @@ export class LoginComponent {
   constructor(private builder: FormBuilder, private toastr: ToastrService, private service: AuthService,
     private router: Router) {      
       if(sessionStorage.getItem('username')!=null){
-        this.toastr.success('Logout successfully.');
+        this.toastr.warning('Logout successfully.');
       }
-      sessionStorage.clear();      
+      sessionStorage.clear();  
   }
   errors: any;
   result: any;
@@ -36,6 +36,7 @@ export class LoginComponent {
             sessionStorage.setItem('role',this.result.role);
             this.router.navigate(['menu']);
             //this.toastr.success('Log In successfully.');
+            this.toastr.success('Login successfully.','',{timeOut: 2000});
           } else {
             this.toastr.error('Please contact Admin', 'InActive User');
           }

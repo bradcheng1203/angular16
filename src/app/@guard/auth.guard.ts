@@ -10,8 +10,7 @@ class PermissionsService {
   constructor(private service: AuthService, private router: Router,private toastr:ToastrService) {}
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    if (this.service.isloggedin()) {      
-      this.toastr.success('Login successfully.','',{timeOut: 2000});
+    if (this.service.isloggedin()) {
       return true;
     }else{
       this.router.navigate(['login']);

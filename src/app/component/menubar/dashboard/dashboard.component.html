@@ -36,11 +36,11 @@
             <input matInput placeholder="Telephone Number" formControlName="hometelephonenumber">
           </mat-form-field>
         </div>
-        <div class="row">
+        <div class="row" >          
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="emailaddress">
-            </mat-form-field>
+            </mat-form-field>          
             <mat-form-field appearance="outline">
               <mat-label>Education</mat-label>
               <mat-select formControlName="education" >
@@ -57,6 +57,7 @@
               <input matInput placeholder="Ex. 4" type="number" formControlName="package">
               <mat-hint>In rupees</mat-hint>
             </mat-form-field>
+          
         </div>        
         <div class="row">
             <mat-radio-group aria-label="Select an option" formControlName="gender" class="pr">
@@ -75,7 +76,7 @@
         </div>
     </div>
     <div mat-dialog-actions class="action">        
-        <button mat-raised-button color="primary" type="submit">  Save  </button>
+        <button mat-raised-button color="primary" type="submit">Save</button>
     </div>
   </form>
 </div>
