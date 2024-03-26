@@ -38,13 +38,13 @@ export class DashboardComponent implements OnInit {
   ) {
     
     this.empForm = this._fb.group({
-      fullName : '',
-      accountNumber: '',      
-      birthDay: '',
-      homeAddress: '',
-      homeCityStateZipCode: '',
-      homeTelephoneNumber: '',
-      emailAddress: '',
+      fullname : '',
+      accountnumber: '',      
+      birthday: '',
+      homeaddress: '',
+      homecitystatezipcode: '',
+      hometelephonenumber: '',
+      emailaddress: '',
       education: '',
       experience: '', 
       package: '', 

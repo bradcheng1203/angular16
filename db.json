@@ -161,7 +161,7 @@
       "accountnumber": "account",
       "birthday": "2024-03-12T16:00:00.000Z",
       "homeaddress": "address",
-      "homecitystatezipCode": "235",
+      "homecitystatezipcode": "235",
       "hometelephonenumber": "0912000888",
       "emailaddress": "andy@gmail.com",
       "education": "研究所",
@@ -173,8 +173,7 @@
         "market 2",
         "market 3"
       ],
-      "id": 1
-    }
+      "id": 1    }
   ],
   "employeedetail": [
     {
