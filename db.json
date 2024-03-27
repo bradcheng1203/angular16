@@ -191,10 +191,10 @@
         "market 2"
       ],
       "checkme": true,
-      "Indeterminate": false,
-      "Primary": false,
-      "Accent": false,
-      "Warn": false,
+      "Indeterminate": true,
+      "Primary": true,
+      "Accent": true,
+      "Warn": true,
       "id": 1
     }
   ],

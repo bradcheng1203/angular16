@@ -100,21 +100,24 @@ export class DashboardComponent implements OnInit {
   allComplete: boolean = false;
 
   updateAllComplete() {
-    this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
+    this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed );
+    console.log('updateAllComplete='+this.allComplete);
   }
 
-  someComplete(): boolean {
+  someComplete(): boolean {    
     if (this.task.subtasks == null) {
       return false;
     }
+    //console.log(this.task.subtasks.filter(t => t.completed).length);
     return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
   }
 
-  setAll(completed: boolean) {
+  setAll(completed: boolean) {    
     this.allComplete = completed;
     if (this.task.subtasks == null) {
       return;
     }
+    console.log('setAll='+this.allComplete);
     this.task.subtasks.forEach(t => (t.completed = completed));
   }
 }
