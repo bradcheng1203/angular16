@@ -188,12 +188,11 @@
       "gender": "Male",
       "markets": [
         "market 1",
-        "market 2",
-        "market 3"
+        "market 2"
       ],
       "checkme": true,
-      "Indeterminate": true,
-      "Primary": true,
+      "Indeterminate": false,
+      "Primary": false,
       "Accent": false,
       "Warn": false,
       "id": 1

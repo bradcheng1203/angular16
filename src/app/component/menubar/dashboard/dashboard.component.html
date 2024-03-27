@@ -67,14 +67,15 @@
             <mat-form-field appearance="outline" class="pr">
               <mat-label>Global Markets</mat-label>
               <mat-select formControlName="markets" multiple >
-                 <mat-option *ngFor="let val of markets" [value]="val">{{val}}
-                 </mat-option>
+                <mat-option *ngFor="let val of markets" [value]="val">{{val}}
+                </mat-option>
               </mat-select>
-            </mat-form-field>
+            </mat-form-field>            
+            
             <section class="example-section">
               <mat-checkbox class="example-margin" formControlName="checkme" >Check me!</mat-checkbox>
               <mat-checkbox class="example-margin" [disabled]="true" >Disabled</mat-checkbox>
-            </section>
+             </section>
             <section class="example-section">
               <span class="example-list-section">
                 <mat-checkbox class="example-margin"
@@ -104,8 +105,5 @@
           <button mat-raised-button color="primary" type="submit">Save</button>
         </div>
     </div>    
-  </form>
-  <div class="row">      
-     
-  </div>  
+  </form>    
 </div>
