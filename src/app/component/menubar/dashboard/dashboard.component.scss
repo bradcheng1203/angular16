@@ -1,20 +1,9 @@
-@use '@angular/material' as mat;
-
-.dense-1 {
-  @include mat.all-component-densities(-3);
-}
-
-.dense-2 {
-  @include mat.all-component-densities(-2);
-}
-
 .main-body {
   padding-top: 20px;
   margin: 0 auto;
   max-width: 1348px;
   mat-form-field {
-    width: 100%;
-        
+    width: 100%;        
   }
   .pr{
     width: 30% ;

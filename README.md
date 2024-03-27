@@ -224,6 +224,8 @@ ng g m menubar --routing
 
 ng g c employee
 
+npm run build
+
 /* 
   displayTimer$ !:Observable<number>; 
   
@@ -245,20 +247,4 @@ ng g c employee
         this.start();
       }      
 }); */ 
-
-"id": 1 ,          
-"fullName": "aaaaa",
-"accountNumber": "",     
-"birthDay": "",
-"homeAddress": "",
-"homeCityStateZipCode": "",
-"homeTelephoneNumber": "",
-"emailAddress": "",
-"education": "",
-"gender":"",      
-"experience": 3, 
-"package": 3,       
-"investmentObjective": "" ,
-"investmentExperience": ""
-
 
