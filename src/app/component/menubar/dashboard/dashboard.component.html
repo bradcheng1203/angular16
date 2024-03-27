@@ -20,8 +20,7 @@
               <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
-        </div>
-        
+        </div>        
         <div class="row">
           <mat-form-field appearance="outline">
               <mat-label>Home Address</mat-label>
@@ -56,8 +55,7 @@
               <mat-label>Package</mat-label>
               <input matInput placeholder="Ex. 4" type="number" formControlName="package">
               <mat-hint>In rupees</mat-hint>
-            </mat-form-field>
-          
+            </mat-form-field>          
         </div>        
         <div class="row">
             <mat-radio-group aria-label="Select an option" formControlName="gender" class="pr">
@@ -73,10 +71,41 @@
                  </mat-option>
               </mat-select>
             </mat-form-field>
+            <section class="example-section">
+              <mat-checkbox class="example-margin" formControlName="checkme" >Check me!</mat-checkbox>
+              <mat-checkbox class="example-margin" [disabled]="true" >Disabled</mat-checkbox>
+            </section>
+            <section class="example-section">
+              <span class="example-list-section">
+                <mat-checkbox class="example-margin"
+                              [checked]="allComplete"
+                              [color]="task.color"
+                              [indeterminate]="someComplete()"
+                              (change)="setAll($event.checked)"
+                              formControlName="{{task.name}}" >
+                  {{task.name}}
+                </mat-checkbox>
+              </span>
+              <span class="example-list-section">
+                <ul>
+                  <li *ngFor="let subtask of task.subtasks">
+                    <mat-checkbox [(ngModel)]="subtask.completed" 
+                                  [color]="subtask.color"
+                                  (ngModelChange)="updateAllComplete()"
+                                  formControlName="{{subtask.name}}" >
+                      {{subtask.name}}
+                    </mat-checkbox>
+                  </li>
+                </ul>
+              </span>
+            </section> 
         </div>
-    </div>
-    <div mat-dialog-actions class="action">        
-        <button mat-raised-button color="primary" type="submit">Save</button>
-    </div>
+        <div class="action">        
+          <button mat-raised-button color="primary" type="submit">Save</button>
+        </div>
+    </div>    
   </form>
+  <div class="row">      
+     
+  </div>  
 </div>

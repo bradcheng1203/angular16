@@ -1,15 +1,22 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { EmployeeService } from 'src/app/@services/employee.service';
 import { CoreService } from '../../core/core.service';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { TooltipPosition } from '@angular/material/tooltip';
-import { Food } from 'src/app/@model/Customer';
+import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
+import { Plan, Amount } from 'src/app/@model/Rateplan';
+import { ThemePalette } from '@angular/material/core';
+
+export interface Task {
+  name: string;
+  completed: boolean;
+  color: ThemePalette;
+  subtasks?: Task[];
+}
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss']  
 })
 export class DashboardComponent implements OnInit {
   empForm: FormGroup;
@@ -35,8 +42,7 @@ export class DashboardComponent implements OnInit {
     private _dialog: MatDialog,
     private _empService: EmployeeService,    
     private _coreService: CoreService 
-  ) {
-    
+  ) {    
     this.empForm = this._fb.group({
       fullname : '',
       accountnumber: '',      
@@ -49,9 +55,13 @@ export class DashboardComponent implements OnInit {
       experience: '', 
       package: '', 
       gender:'',
-      markets : ''
-    });
-    
+      markets : '',
+      checkme : '',      
+      Indeterminate :'',
+      Primary:'',
+      Accent:'',
+      Warn:''
+    });    
   }   
   
   ngOnInit(): void {
@@ -76,6 +86,35 @@ export class DashboardComponent implements OnInit {
     }
   } 
   
-  
-  
+  task: Task = {
+    name: 'Indeterminate',
+    completed: false,
+    color: 'primary',
+    subtasks: [
+      {name: 'Primary', completed: false, color: 'primary'},
+      {name: 'Accent', completed: false, color: 'accent'},
+      {name: 'Warn', completed: false, color: 'warn'},
+    ],
+  };
+
+  allComplete: boolean = false;
+
+  updateAllComplete() {
+    this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed);
+  }
+
+  someComplete(): boolean {
+    if (this.task.subtasks == null) {
+      return false;
+    }
+    return this.task.subtasks.filter(t => t.completed).length > 0 && !this.allComplete;
+  }
+
+  setAll(completed: boolean) {
+    this.allComplete = completed;
+    if (this.task.subtasks == null) {
+      return;
+    }
+    this.task.subtasks.forEach(t => (t.completed = completed));
+  }
 }

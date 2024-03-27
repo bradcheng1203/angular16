@@ -3,11 +3,11 @@
   margin: 0 auto;
   max-width: 1348px;
   mat-form-field {
-    width: 100%;        
+    width: 100%;     
   }
   .pr{
     width: 30% ;
-    padding-right: 50px;
+    padding-right: 0px;    
   }
 }
 
@@ -17,29 +17,30 @@
 .row {
   display: flex;
   gap: 20px;
-  margin-top: 15px;  
+  margin-top: 15px;
   mat-form-field {
     width: 100%;
   }
 }
 
-input.mat-input-element {height:105px}
-
 .action {
-  padding: 40px 25px 20px;
+  padding: 0px 25px;
+  text-align: center;
   button {
       flex: 1;
       padding: 0px 40px 0px  40px;
   }
-  
-  button_sm {
-    margin-right: 1vw;
-    background: #4285F4;
-    color: white;
-    font-size: 9px;
-    line-height: 18px;
-    height: auto;
-    width: auto;
-  }
 }
 
+.example-section {
+  margin: 12px 0;
+}
+
+.example-margin {
+  margin: 0 12px;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 4px;
+}

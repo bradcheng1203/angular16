@@ -191,6 +191,11 @@
         "market 2",
         "market 3"
       ],
+      "checkme": true,
+      "Indeterminate": true,
+      "Primary": true,
+      "Accent": false,
+      "Warn": false,
       "id": 1
     }
   ],
