@@ -22,9 +22,9 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'menu',component:MenubarComponent,
     children:[      
+      {path:'dashboard',component:DashboardComponent},
       {path:'employee',component:EmployeeComponent},
       {path:'user',component:UserComponent},      
-      {path:'dashboard',component:DashboardComponent},
       {path:'slider',component:SliderComponent},    
       {path:'associate',component:AssociateComponent},
       {path:'table',component:TableComponent},

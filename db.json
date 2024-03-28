@@ -42,7 +42,7 @@
       "password": "Test@1234",
       "email": "test123@gmail.com",
       "gender": "male",
-      "role": "tech",
+      "role": "user",
       "isactive": true
     },
     {
@@ -192,8 +192,8 @@
       ],
       "checkme": true,
       "Indeterminate": false,
-      "Primary": false,
-      "Accent": false,
+      "Primary": true,
+      "Accent": true,
       "Warn": true,
       "id": 1
     }

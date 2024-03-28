@@ -32,5 +32,5 @@ export class GlobalserviceService {
       {name: 'Warn2', completed: false, color: 'warn'},
     ],
   };  
-  allComplete2: boolean = false;  
+  allComplete2: boolean = false;
 }

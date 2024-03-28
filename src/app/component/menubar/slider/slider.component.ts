@@ -26,15 +26,11 @@ export class SliderComponent implements OnInit {
   
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
-    // debugger;
-    this.allComplete2 = this._globSvc.allComplete2;
-    this.task2 = this._globSvc.task2;
+    // debugger;   
   }
   
   ngOnDestroy(){
-    // debugger;
-    this._globSvc.allComplete2 = this.allComplete2;
-    this._globSvc.task2 = this.task2;
+    // debugger;    
   }
    
 }

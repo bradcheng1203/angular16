@@ -68,27 +68,20 @@ export class DashboardComponent implements OnInit {
       {name: 'Warn', completed: false, color: 'warn'},
     ],
   };
-  allComplete: boolean = false;
-  
-  task2 !: Task ;
-  allComplete2 !: boolean ;
-  
+  allComplete: boolean = false;  
+    
   ngOnInit(): void {
     // debugger;
     this._empService.getCusrtmerById(1).subscribe(res=>{
       this.editdata = res;
       this.empForm.patchValue(this.editdata);
       console.log(this.empForm.value); 
-    });
+    });  
     
-    this.allComplete2 = this._globSvc.allComplete2;
-    this.task2 = this._globSvc.task2;
   }
   
   ngOnDestroy(){
-    // debugger;
-    this._globSvc.allComplete2 = this.allComplete2;
-    this._globSvc.task2 = this.task2;
+    // debugger;    
   }
   
   onFormSubmit() {    

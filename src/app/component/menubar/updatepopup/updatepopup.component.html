@@ -6,7 +6,7 @@
             <mat-label>Role</mat-label>
             <mat-select formControlName="role">
                 <mat-option value=''>Select Role</mat-option>
-                <mat-option *ngFor="let item of rolelist" [value]="item.code">
+                <mat-option *ngFor="let item of rolelist" [value]="item.code" >
                     {{item.name}}
                 </mat-option>
             </mat-select>
@@ -14,12 +14,12 @@
 
         <section class="example-section">
             <br>
-            <mat-checkbox  formControlName="isactive" class="example-margin">Is Active</mat-checkbox>
+            <mat-checkbox  formControlName="isactive" class="example-margin" >Is Active</mat-checkbox>
         </section>
 
     </div>
     <div mat-dialog-actions>
-        <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+        <button type="submit" mat-raised-button color="primary" cdkFocusInitial >Save</button>
         <button mat-raised-button color="warn" mat-dialog-close>Close</button>
     </div>
 </form>
