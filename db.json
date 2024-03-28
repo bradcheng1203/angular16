@@ -178,13 +178,13 @@
       "fullname": "Chetan Jogi",
       "accountnumber": "accountName",
       "birthday": "2024-03-12T16:00:00.000Z",
-      "homeaddress": "address",
+      "homeaddress": "addressaaxaaaa",
       "homecitystatezipcode": "235",
       "hometelephonenumber": "0912000888",
       "emailaddress": "andy@gmail.com",
       "education": "大學",
       "experience": 5,
-      "package": 5,
+      "package": 4,
       "gender": "Male",
       "markets": [
         "market 1",
@@ -193,7 +193,7 @@
       "checkme": true,
       "Indeterminate": false,
       "Primary": false,
-      "Accent": true,
+      "Accent": false,
       "Warn": true,
       "id": 1
     }

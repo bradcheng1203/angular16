@@ -21,66 +21,60 @@
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-form-field appearance="outline">
-              <mat-label>Home Address</mat-label>
-              <input matInput type="text" placeholder="Home Address" formControlName="homeaddress">
-            </mat-form-field>
+              <mat-label>Telephone Number</mat-label>
+              <input matInput placeholder="Telephone Number" formControlName="hometelephonenumber">
+            </mat-form-field>            
         </div>        
-        <div class="row">
-          <mat-form-field appearance="outline">
-              <mat-label>Home Address</mat-label>
-              <input matInput type="text" placeholder="Home Address" formControlName="homeaddress">
-          </mat-form-field>
+        <div class="row">          
           <mat-form-field appearance="outline">
               <mat-label>City/State/ZipCode</mat-label>
               <input matInput placeholder="City/State/ZipCode" formControlName="homecitystatezipcode">
           </mat-form-field>
           <mat-form-field appearance="outline">
-            <mat-label>Telephone Number</mat-label>
-            <input matInput placeholder="Telephone Number" formControlName="hometelephonenumber">
+            <mat-label>Home Address</mat-label>
+            <input matInput type="text" placeholder="Home Address" formControlName="homeaddress">
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
             <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="emailaddress">
           </mat-form-field>          
-          
+          <mat-form-field appearance="outline">
+            <mat-label>Education</mat-label>
+            <mat-select formControlName="education" >
+                <mat-option *ngFor="let val of education" [value]="val">{{val}}
+                </mat-option>
+            </mat-select>
+          </mat-form-field>
         </div>
-        <div class="row" >          
-            <mat-form-field appearance="outline">
-              <mat-label>Education</mat-label>
-              <mat-select formControlName="education" >
-                  <mat-option *ngFor="let val of education" [value]="val">{{val}}
-                  </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
+        <div class="row" >            
+            <mat-form-field appearance="outline" class="pr">
               <mat-label>Experience</mat-label>
               <input matInput placeholder="Ex. 4" type="number" formControlName="experience">
             </mat-form-field>
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="pr">
               <mat-label>Package</mat-label>
               <input matInput placeholder="Ex. 4" type="number" formControlName="package">
               <mat-hint>In rupees</mat-hint>
             </mat-form-field>
-            <mat-form-field appearance="outline" >
+            <mat-form-field appearance="outline" class="pr">
               <mat-label>Global Markets</mat-label>
               <mat-select formControlName="markets" multiple >
                 <mat-option *ngFor="let val of markets" [value]="val">{{val}}
                 </mat-option>
               </mat-select>
-            </mat-form-field>   
-        </div>        
-        <div class="row">
+            </mat-form-field>
             <mat-radio-group aria-label="Select an option" formControlName="gender" >
               <mat-label><b>Gender</b></mat-label>
               <mat-radio-button value="Male">Male</mat-radio-button>
               <mat-radio-button value="Female">Female</mat-radio-button>
               <mat-radio-button value="Others">Others</mat-radio-button>
-            </mat-radio-group>                
-            
+            </mat-radio-group> 
+        </div>        
+        <div class="row">                        
             <section class="example-section">
               <mat-checkbox class="example-margin" formControlName="checkme" >Check me!</mat-checkbox>
               <mat-checkbox class="example-margin" [disabled]="true" >Disabled</mat-checkbox>
-             </section>
+            </section>
             <section class="example-section">
               <span class="example-list-section">
                 <mat-checkbox class="example-margin"
@@ -104,10 +98,10 @@
                   </li>
                 </ul>
               </span>
-            </section>
-        </div>        
-        <div class="action">        
-          <button mat-raised-button color="primary" type="submit">Save</button>
+            </section>            
+            <div class="action">        
+              <button mat-raised-button color="primary" type="submit">Save</button>
+            </div>            
         </div>
     </div>    
   </form>
