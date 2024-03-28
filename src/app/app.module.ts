@@ -24,6 +24,7 @@ import { UpdatepopupComponent } from './component/menubar/updatepopup/updatepopu
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AssociateComponent } from './component/menubar/associate/associate.component';
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,17 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { EmployeeService } from 'src/app/@services/employee.service';
 import { CoreService } from '../../core/core.service';
-import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
-import { Plan, Amount } from 'src/app/@model/Rateplan';
-import { ThemePalette } from '@angular/material/core';
-
-export interface Task {
-  name: string;
-  completed: boolean;
-  color: ThemePalette;
-  subtasks?: Task[];
-}
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Task } from 'src/app/@model/Interfaces';
+import { GlobalserviceService } from 'src/app/@services/globalservice.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -20,7 +13,7 @@ export interface Task {
 })
 export class DashboardComponent implements OnInit {
   empForm: FormGroup;
-  editdata: any;
+  editdata: any;  
   
   education: string[] = [
     '博士',
@@ -35,13 +28,14 @@ export class DashboardComponent implements OnInit {
     'market 2',
     'market 3',
     'market 4'
-  ];  
-  
+  ];
+    
   constructor(
     private _fb: FormBuilder,
     private _dialog: MatDialog,
     private _empService: EmployeeService,    
-    private _coreService: CoreService 
+    private _coreService: CoreService ,
+    private _globSvc: GlobalserviceService
   ) {    
     this.empForm = this._fb.group({
       fullname : '',
@@ -62,14 +56,39 @@ export class DashboardComponent implements OnInit {
       Accent:'',
       Warn:''
     });    
-  }   
+  }
+  
+  task: Task = {
+    name: 'Indeterminate',
+    completed: false,
+    color: 'primary',
+    subtasks: [
+      {name: 'Primary', completed: false, color: 'primary'},
+      {name: 'Accent', completed: false, color: 'accent'},
+      {name: 'Warn', completed: false, color: 'warn'},
+    ],
+  };
+  allComplete: boolean = false;
+  
+  task2 !: Task ;
+  allComplete2 !: boolean ;
   
   ngOnInit(): void {
+    // debugger;
     this._empService.getCusrtmerById(1).subscribe(res=>{
       this.editdata = res;
       this.empForm.patchValue(this.editdata);
-      console.log(this.empForm.value);      
-    })
+      console.log(this.empForm.value); 
+    });
+    
+    this.allComplete2 = this._globSvc.allComplete2;
+    this.task2 = this._globSvc.task2;
+  }
+  
+  ngOnDestroy(){
+    // debugger;
+    this._globSvc.allComplete2 = this.allComplete2;
+    this._globSvc.task2 = this.task2;
   }
   
   onFormSubmit() {    
@@ -84,20 +103,7 @@ export class DashboardComponent implements OnInit {
         },
       });
     }
-  } 
-  
-  task: Task = {
-    name: 'Indeterminate',
-    completed: false,
-    color: 'primary',
-    subtasks: [
-      {name: 'Primary', completed: false, color: 'primary'},
-      {name: 'Accent', completed: false, color: 'accent'},
-      {name: 'Warn', completed: false, color: 'warn'},
-    ],
-  };
-
-  allComplete: boolean = false;
+  }  
 
   updateAllComplete() {
     this.allComplete = this.task.subtasks != null && this.task.subtasks.every(t => t.completed );
@@ -119,5 +125,5 @@ export class DashboardComponent implements OnInit {
     }
     console.log('setAll='+this.allComplete);
     this.task.subtasks.forEach(t => (t.completed = completed));
-  }
+  }  
 }

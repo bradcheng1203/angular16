@@ -190,9 +190,9 @@
         "market 1",
         "market 2"
       ],
-      "checkme": true,
+      "checkme": false,
       "Indeterminate": true,
-      "Primary": true,
+      "Primary": false,
       "Accent": true,
       "Warn": true,
       "id": 1
