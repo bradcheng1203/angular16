@@ -1,6 +1,6 @@
 <div class="main-body">
-  <div mat-dialog-title>
-    <h1>Customer Form</h1>
+  <div mat-dialog-title style="text-align: center;" >
+    <h1 >Customer Form</h1>
   </div>
   <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
@@ -20,6 +20,10 @@
               <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Home Address</mat-label>
+              <input matInput type="text" placeholder="Home Address" formControlName="homeaddress">
+            </mat-form-field>
         </div>        
         <div class="row">
           <mat-form-field appearance="outline">
@@ -34,12 +38,13 @@
             <mat-label>Telephone Number</mat-label>
             <input matInput placeholder="Telephone Number" formControlName="hometelephonenumber">
           </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="emailaddress">
+          </mat-form-field>          
+          
         </div>
         <div class="row" >          
-            <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="emailaddress">
-            </mat-form-field>          
             <mat-form-field appearance="outline">
               <mat-label>Education</mat-label>
               <mat-select formControlName="education" >
@@ -55,22 +60,22 @@
               <mat-label>Package</mat-label>
               <input matInput placeholder="Ex. 4" type="number" formControlName="package">
               <mat-hint>In rupees</mat-hint>
-            </mat-form-field>          
-        </div>        
-        <div class="row">
-            <mat-radio-group aria-label="Select an option" formControlName="gender" class="pr">
-                <mat-label><b>Gender</b></mat-label>
-                <mat-radio-button value="Male">Male</mat-radio-button>
-                <mat-radio-button value="Female">Female</mat-radio-button>
-                <mat-radio-button value="Others">Others</mat-radio-button>
-            </mat-radio-group>
-            <mat-form-field appearance="outline" class="pr">
+            </mat-form-field>
+            <mat-form-field appearance="outline" >
               <mat-label>Global Markets</mat-label>
               <mat-select formControlName="markets" multiple >
                 <mat-option *ngFor="let val of markets" [value]="val">{{val}}
                 </mat-option>
               </mat-select>
-            </mat-form-field>            
+            </mat-form-field>   
+        </div>        
+        <div class="row">
+            <mat-radio-group aria-label="Select an option" formControlName="gender" >
+              <mat-label><b>Gender</b></mat-label>
+              <mat-radio-button value="Male">Male</mat-radio-button>
+              <mat-radio-button value="Female">Female</mat-radio-button>
+              <mat-radio-button value="Others">Others</mat-radio-button>
+            </mat-radio-group>                
             
             <section class="example-section">
               <mat-checkbox class="example-margin" formControlName="checkme" >Check me!</mat-checkbox>
@@ -100,8 +105,7 @@
                 </ul>
               </span>
             </section>
-        </div>
-        
+        </div>        
         <div class="action">        
           <button mat-raised-button color="primary" type="submit">Save</button>
         </div>
