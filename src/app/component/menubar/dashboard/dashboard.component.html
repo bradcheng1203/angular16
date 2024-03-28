@@ -4,123 +4,114 @@
   </div>
   <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>First name</mat-label>
-                <input matInput type="text" placeholder="Ex. Technical" formControlName="fullname">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Account Name</mat-label>
-                <input matInput placeholder="Ex. Babaji" formControlName="accountnumber">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label>Date of birth</mat-label>
-              <input matInput [matDatepicker]="picker" formControlName="birthday">
-              <mat-hint>MM/DD/YYYY</mat-hint>
-              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label>Telephone Number</mat-label>
-              <input matInput placeholder="Telephone Number" formControlName="hometelephonenumber">
-            </mat-form-field>            
-        </div>        
-        <div class="row">          
-          <mat-form-field appearance="outline">
-              <mat-label>City/State/ZipCode</mat-label>
-              <input matInput placeholder="City/State/ZipCode" formControlName="homecitystatezipcode">
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Home Address</mat-label>
-            <input matInput type="text" placeholder="Home Address" formControlName="homeaddress">
-          </mat-form-field>
-          <mat-form-field appearance="outline">
-            <mat-label>Email</mat-label>
-            <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="emailaddress">
-          </mat-form-field>          
-          <mat-form-field appearance="outline">
-            <mat-label>Education</mat-label>
-            <mat-select formControlName="education" >
-                <mat-option *ngFor="let val of education" [value]="val">{{val}}
-                </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div class="row" >            
-            <mat-form-field appearance="outline" class="pr">
-              <mat-label>Experience</mat-label>
-              <input matInput placeholder="Ex. 4" type="number" formControlName="experience">
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="pr">
-              <mat-label>Package</mat-label>
-              <input matInput placeholder="Ex. 4" type="number" formControlName="package">
-              <mat-hint>In rupees</mat-hint>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="pr">
-              <mat-label>Global Markets</mat-label>
-              <mat-select formControlName="markets" multiple >
-                <mat-option *ngFor="let val of markets" [value]="val">{{val}}
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-            <mat-radio-group aria-label="Select an option" formControlName="gender" >
-              <mat-label><b>Gender</b></mat-label>
-              <mat-radio-button value="Male">Male</mat-radio-button>
-              <mat-radio-button value="Female">Female</mat-radio-button>
-              <mat-radio-button value="Others">Others</mat-radio-button>
-            </mat-radio-group> 
-        </div>        
-        <div class="row">                        
-            <section class="example-section">
-              <mat-checkbox class="example-margin" formControlName="checkme" >Check me!</mat-checkbox>
-              <mat-checkbox class="example-margin" [disabled]="true" >Disabled</mat-checkbox>
-            </section>
-            <section class="example-section">
-              <span class="example-list-section">
-                <mat-checkbox class="example-margin"
-                              [checked]="allComplete"
-                              [color]="task.color"
-                              [indeterminate]="someComplete()"
-                              (change)="setAll($event.checked)"
-                              formControlName="{{task.name}}" >
-                  {{task.name}}
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput type="text" placeholder="Ex. Technical" formControlName="fullname">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Account Name</mat-label>
+          <input matInput placeholder="Ex. Babaji" formControlName="accountnumber">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Date of birth</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="birthday">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Telephone Number</mat-label>
+          <input matInput placeholder="Telephone Number" formControlName="hometelephonenumber">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>City/State/ZipCode</mat-label>
+          <input matInput placeholder="City/State/ZipCode" formControlName="homecitystatezipcode">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Home Address</mat-label>
+          <input matInput type="text" placeholder="Home Address" formControlName="homeaddress">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput type="email" placeholder="Ex. test@gmail.com" formControlName="emailaddress">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Education</mat-label>
+          <mat-select formControlName="education">
+            <mat-option *ngFor="let val of education" [value]="val">{{val}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline" class="pr">
+          <mat-label>Experience</mat-label>
+          <input matInput placeholder="Ex. 4" type="number" formControlName="experience">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="pr">
+          <mat-label>Package</mat-label>
+          <input matInput placeholder="Ex. 4" type="number" formControlName="package">
+          <mat-hint>In rupees</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="pr">
+          <mat-label>Global Markets</mat-label>
+          <mat-select formControlName="markets" multiple>
+            <mat-option *ngFor="let val of markets" [value]="val">{{val}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-radio-group aria-label="Select an option" formControlName="gender">
+          <mat-label><b>Gender</b></mat-label>
+          <mat-radio-button value="Male">Male</mat-radio-button>
+          <mat-radio-button value="Female">Female</mat-radio-button>
+          <mat-radio-button value="Others">Others</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="row">
+        <section class="example-section">
+          <mat-checkbox class="example-margin" formControlName="checkme">Check me!</mat-checkbox>
+          <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
+        </section>
+        <section class="example-section">
+          <span class="example-list-section">
+            <mat-checkbox class="example-margin" [checked]="allComplete" [color]="task.color"
+              [indeterminate]="someComplete()" (change)="setAll($event.checked)" formControlName="{{task.name}}">
+              {{task.name}}
+            </mat-checkbox>
+          </span>
+          <span class="example-list-section">
+            <ul>
+              <li *ngFor="let subtask of task.subtasks">
+                <mat-checkbox [(ngModel)]="subtask.completed" [color]="subtask.color"
+                  (ngModelChange)="updateAllComplete()" formControlName="{{subtask.name}}">
+                  {{subtask.name}}
                 </mat-checkbox>
-              </span>
-              <span class="example-list-section">
-                <ul>
-                  <li *ngFor="let subtask of task.subtasks">
-                    <mat-checkbox [(ngModel)]="subtask.completed" 
-                                  [color]="subtask.color"
-                                  (ngModelChange)="updateAllComplete()"
-                                  formControlName="{{subtask.name}}" >
-                      {{subtask.name}}
-                    </mat-checkbox>
-                  </li>
-                </ul>
-              </span>
-            </section>            
-            <div class="action">        
-              <button mat-raised-button color="primary" type="submit">Save</button>
-            </div>            
+              </li>
+            </ul>
+          </span>
+        </section>
+        <div class="action">
+          <button mat-raised-button color="primary" type="submit">Save</button>
         </div>
-    </div>    
+      </div>
+    </div>
   </form>
   <div class="row">
     <section class="example-section">
       <span class="example-list-section">
-        <mat-checkbox class="example-margin"
-                      [(ngModel)]="allComplete2"
-                      [color]="task2.color" >
+        <mat-checkbox class="example-margin" [(ngModel)]="allComplete2" [color]="task2.color">
           {{task2.name}}
         </mat-checkbox>
       </span>
-      <span class="example-list-section">        
-          <span *ngFor="let subtask of task2.subtasks">
-            <mat-checkbox [(ngModel)]="subtask.completed" 
-                          [color]="subtask.color" >
-              {{subtask.name}}
-            </mat-checkbox>
-          </span>        
+      <span class="example-list-section">
+        <span *ngFor="let subtask of task2.subtasks">
+          <mat-checkbox [(ngModel)]="subtask.completed" [color]="subtask.color">
+            {{subtask.name}}
+          </mat-checkbox>
+        </span>
       </span>
     </section>
   </div>
