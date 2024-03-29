@@ -30,6 +30,7 @@ export class StepperComponent implements OnInit {
   ];
   
   stepForm: FormGroup;
+  editdata: any;
   
   constructor(
     private _fb: FormBuilder,
@@ -51,12 +52,17 @@ export class StepperComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
+    this._empService.getTransById(1).subscribe(res=>{
+      this.editdata = res;
+      this.stepForm.patchValue(this.editdata);
+      console.log(this.stepForm.value);
+    });
   }
   
-  onFormSubmit() {    
+  onFormSubmit() {   
     console.log(this.stepForm.value);
-    if (this.stepForm.valid) {      
+    if (this.stepForm.valid) {
       this._empService.updateTrans(1, this.stepForm.value).subscribe({
         next: (val: any) => {
           this._coreService.openSnackBar('Trans updated!');
@@ -67,5 +73,4 @@ export class StepperComponent implements OnInit {
       });
     }
   }
-
 }

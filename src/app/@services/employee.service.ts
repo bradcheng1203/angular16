@@ -37,4 +37,9 @@ export class EmployeeService {
   updateTrans(id: number, data: any): Observable<any> {
     return this._http.put(this.apiurl+`/trans/${id}`, data);
   }
+  
+  getTransById(id: number): Observable<any> {
+    return this._http.get(this.apiurl+`/trans/${id}`);
+  }
+  
 }
