@@ -1,0 +1,98 @@
+
+<form [formGroup]="stepForm" (ngSubmit)="onFormSubmit()" class="w80" >
+  <div class="main-body">
+    <mat-card >
+      <mat-card-content>
+        <mat-horizontal-stepper>
+          <mat-step label="填寫資料">
+            <div class="content">
+              <p>轉出帳號與幣別</p>
+              <div class="row">
+                <mat-form-field appearance="outline" class="w40">
+                  <mat-label>轉出帳號</mat-label>
+                  <mat-select formControlName="transout">
+                      <mat-option *ngFor="let val of transout" [value]="val">{{val}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w20">
+                    <mat-label>金額</mat-label>
+                    <input matInput placeholder="請輸入金額" formControlName="transoutamt">
+                </mat-form-field>
+              </div>
+              <div class="row">            
+                <mat-form-field appearance="outline" class="w40">
+                  <mat-label>轉入幣別</mat-label>
+                  <mat-select formControlName="transincurr">
+                      <mat-option *ngFor="let val of currency" [value]="val">{{val}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w20">
+                    <mat-label>金額</mat-label>
+                    <input matInput placeholder="0" formControlName="transinamt" readonly >
+                </mat-form-field>
+              </div>
+              <div class="row">            
+                <mat-form-field appearance="outline" class="w40">
+                  <mat-label>轉入帳號</mat-label>
+                  <mat-select formControlName="transin">
+                      <mat-option *ngFor="let val of transout" [value]="val">{{val}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <hr style="border-color:rgb(184, 181, 181);">
+              <div class="row">            
+                <mat-radio-group aria-label="Select an option" formControlName="transtype">
+                  <mat-label><b>交易類型</b></mat-label>
+                  <mat-radio-button value="Male">單筆轉匯/外匯</mat-radio-button>
+                  <mat-radio-button value="Female">定期定額換匯</mat-radio-button>              
+                </mat-radio-group>
+              </div>
+              <div class="row">         
+                <mat-form-field appearance="outline" class="w40">
+                  <mat-label>交易日期</mat-label>
+                  <input matInput [matDatepicker]="picker" formControlName="transdate">
+                  <mat-hint>MM/DD/YYYY</mat-hint>
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <mat-radio-group aria-label="Select an option" formControlName="declaration">
+                  <mat-label><b>匯款性質</b></mat-label>
+                  <mat-radio-button value="Male">常用申報性質</mat-radio-button>
+                  <mat-radio-button value="Female">自行選擇申報性質</mat-radio-button>              
+                </mat-radio-group>
+              </div>
+              <div class="row">
+                <mat-form-field appearance="outline" class="w40 pf40">              
+                  <mat-select formControlName="transreason">
+                      <mat-option *ngFor="let val of transreason" [value]="val">{{val}}
+                      </mat-option>
+                  </mat-select>
+                </mat-form-field>            
+              </div>          
+              <div class="row">
+                <mat-form-field appearance="outline" class="w40 pf40">
+                  <mat-label>註記</mat-label>
+                  <input matInput placeholder="註記" formControlName="transmemo" >
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="action center2">
+              <button mat-raised-button color="primary" type="submit" >下一步</button>
+            </div>
+          </mat-step>
+          <mat-step label="確認及輸入密碼">
+            <p>確認及輸入密碼</p>
+          </mat-step>
+          <mat-step label="換匯結果">
+            <p>換匯結果</p>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</form>

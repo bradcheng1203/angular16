@@ -1,0 +1,73 @@
+.main-body {
+  padding: 10px;
+  //margin: 0 auto;
+  margin: 10px ;  
+  max-width: 1248px;
+  //border: 1px solid #73AD21;
+  display: flex; 
+  gap: 1rem; 
+  justify-content: center;
+  mat-form-field {
+    width: 80%;
+  }
+  mat-card {
+    width: 70%;  
+    //min-height: 548px;
+  }
+  mat-radio-button{
+    padding-left: 30px;
+  }
+  .w20{
+    width: 20% ;
+    padding-right: 50px;
+  }
+  .w30{
+    width: 30% ;
+    padding-right: 50px;
+  }
+  .w40{
+    width: 40% ;
+    padding-right: 50px;
+  }  
+  .w50{
+    width: 50% ;
+    padding-right: 50px;
+  }
+  .w80{
+    width: 50% ;
+    padding-right: 50px;
+  }
+  .pf40{    
+    padding-left: 50px;
+  }
+}
+
+// .content {
+//   padding-top: 10px;
+// }
+
+.row {
+   display: flex;
+   gap: 20px;
+   padding-top: 10px;
+}
+
+.action {
+  padding: 0px 25px 0px;
+  button {
+    flex: 1;    
+  }
+}
+
+.center2{
+  display: flex;
+  /* 水平置中 */
+  justify-content: center;    
+  /* 垂直置中 */
+  align-content: center;     
+  flex-wrap: wrap;
+  margin: auto;
+  width: 15%;
+  //border: 1px solid #ad5721; 
+  text-align: center;
+}

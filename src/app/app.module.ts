@@ -24,6 +24,7 @@ import { UpdatepopupComponent } from './component/menubar/updatepopup/updatepopu
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AssociateComponent } from './component/menubar/associate/associate.component';
+import { StepperComponent } from './component/menubar/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ import { AssociateComponent } from './component/menubar/associate/associate.comp
     CardComponent, 
     EmpAddEditComponent, EmployeeComponent, SliderComponent, TableComponent, 
     DashboardComponent, InputComponent, LoginComponent, UserComponent, UpdatepopupComponent, 
-    RegisterComponent, NotfoundComponent, AssociateComponent,
+    RegisterComponent, NotfoundComponent, AssociateComponent, StepperComponent,
   ],
   imports: [
     BrowserModule,

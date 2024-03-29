@@ -33,4 +33,8 @@ export class EmployeeService {
   getCusrtmerById(id: number): Observable<any> {
     return this._http.get(this.apiurl+`/customer/${id}`);
   }
+  
+  updateTrans(id: number, data: any): Observable<any> {
+    return this._http.put(this.apiurl+`/trans/${id}`, data);
+  }
 }

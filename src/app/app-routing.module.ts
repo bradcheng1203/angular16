@@ -16,6 +16,7 @@ import { AutocompleteComponent } from './component/menubar/autocomplete/autocomp
 import { UserComponent } from './component/menubar/user/user.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AuthGuard } from './@guard/auth.guard';
+import { StepperComponent } from './component/menubar/stepper/stepper.component';
 
 const routes: Routes = [  
   {path:'login',component:LoginComponent},
@@ -24,8 +25,9 @@ const routes: Routes = [
     children:[      
       {path:'dashboard',component:DashboardComponent},
       {path:'employee',component:EmployeeComponent},
-      {path:'user',component:UserComponent},      
-      {path:'slider',component:SliderComponent},    
+      {path:'user',component:UserComponent},
+      {path:'slider',component:SliderComponent},
+      {path:'stepper',component:StepperComponent},
       {path:'associate',component:AssociateComponent},
       {path:'table',component:TableComponent},
       {path:'input',component:InputComponent},
