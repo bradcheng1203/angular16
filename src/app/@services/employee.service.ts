@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class EmployeeService {
   constructor(private _http: HttpClient) {}
   
-  apiurl='http://localhost:3000';  
+  apiurl='http://localhost:3000';
   
   addEmployee(data: any): Observable<any> {
     return this._http.post(this.apiurl+'/employees', data);

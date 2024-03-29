@@ -10,7 +10,7 @@ export class AssociateService {
 
   constructor(private http: HttpClient) { }
   
-  apiurl='http://localhost:3000';  
+  apiurl='http://localhost:3000';
   
   getAssociate(){
     return this.http.get(this.apiurl+'/associate');
