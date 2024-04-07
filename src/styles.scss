@@ -7,7 +7,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin: 5px !important;
 }
 .mat-mdc-form-field{
-  width: 100%;
+  width: 100%;  
 }
 .content{
   display: block !important;
@@ -25,10 +25,11 @@ a{
   align-content: center;     
   flex-wrap: wrap;
   //margin: auto;
-  width: 85%;
+  width: 90%;
   // border: 1px solid #73AD21;
   //padding: 100px 0;
   padding: 5%;
   min-height: 20em ;  
   text-align: center; 
 }
+

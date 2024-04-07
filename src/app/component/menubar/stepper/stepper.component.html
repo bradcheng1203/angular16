@@ -3,7 +3,7 @@
   <div class="main-body">
     <mat-card >
       <mat-card-content>
-        <mat-horizontal-stepper>
+        <mat-horizontal-stepper [linear]="true" #stepper >
           <mat-step label="填寫資料">
             <div class="content">
               <p>轉出帳號與幣別</p>
@@ -37,7 +37,7 @@
                 <mat-form-field appearance="outline" class="w40">
                   <mat-label>轉入帳號</mat-label>
                   <mat-select formControlName="transin">
-                      <mat-option *ngFor="let val of transout" [value]="val">{{val}}
+                      <mat-option *ngFor="let val of transin" [value]="val">{{val}}
                       </mat-option>
                   </mat-select>
                 </mat-form-field>
@@ -46,8 +46,8 @@
               <div class="row">            
                 <mat-radio-group aria-label="Select an option" formControlName="transtype">
                   <mat-label><b>交易類型</b></mat-label>
-                  <mat-radio-button value="Male">單筆轉匯/外匯</mat-radio-button>
-                  <mat-radio-button value="Female">定期定額換匯</mat-radio-button>              
+                  <mat-radio-button value="onetime">單筆轉匯/外匯</mat-radio-button>
+                  <mat-radio-button value="regular">定期定額換匯</mat-radio-button>              
                 </mat-radio-group>
               </div>
               <div class="row">         
@@ -62,18 +62,26 @@
               <div class="row">
                 <mat-radio-group aria-label="Select an option" formControlName="declaration">
                   <mat-label><b>匯款性質</b></mat-label>
-                  <mat-radio-button value="Male">常用申報性質</mat-radio-button>
-                  <mat-radio-button value="Female">自行選擇申報性質</mat-radio-button>              
+                  <mat-radio-button (change)="call()" [value]="true" >常用申報性質</mat-radio-button>
+                  <mat-radio-button (change)="call()" [value]="false" >自行選擇申報性質</mat-radio-button>
                 </mat-radio-group>
               </div>
               <div class="row">
-                <mat-form-field appearance="outline" class="w40 pf40">              
-                  <mat-select formControlName="transreason">
-                      <mat-option *ngFor="let val of transreason" [value]="val">{{val}}
-                      </mat-option>
-                  </mat-select>
-                </mat-form-field>            
-              </div>          
+                <div *ngIf ="edit" class="w50">
+                  <mat-form-field appearance="outline" class="pf40">              
+                    <mat-select formControlName="transreason">
+                        <mat-option *ngFor="let val of transreason" [value]="val">{{val}}
+                        </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div *ngIf ="!edit" class="w50" >
+                  <mat-form-field appearance="outline" class="pf40">
+                    <mat-label>結構申報性質</mat-label>
+                    <input matInput placeholder="結構申報性質" formControlName="transmemo2" >
+                  </mat-form-field>
+                </div>
+              </div>
               <div class="row">
                 <mat-form-field appearance="outline" class="w40 pf40">
                   <mat-label>註記</mat-label>
@@ -82,14 +90,25 @@
               </div>
             </div>
             <div class="action center2">
-              <button mat-raised-button color="primary" type="submit" >下一步</button>
+              <button mat-raised-button matStepperNext type="button" color="primary" >下一步</button>
             </div>
           </mat-step>
           <mat-step label="確認及輸入密碼">
             <p>確認及輸入密碼</p>
+            <div class="row">
+              <mat-form-field appearance="outline" class="w40 pf40">
+                <mat-label>確認</mat-label>
+                <input matInput placeholder="確認" formControlName="confirm" >
+              </mat-form-field>              
+            </div>            
+            <div class="action center2">
+              <button mat-raised-button matStepperPrevious type="button" color="primary" >上一步</button>              
+              <button mat-raised-button matStepperNext color="primary" type="submit" >確認換匯</button>
+            </div>            
           </mat-step>
           <mat-step label="換匯結果">
             <p>換匯結果</p>
+            <button mat-raised-button color="primary" type="button" (click)="goBack(stepper)" >再次換匯</button>
           </mat-step>
         </mat-horizontal-stepper>
       </mat-card-content>

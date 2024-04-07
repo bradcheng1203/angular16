@@ -301,16 +301,18 @@
   ],
   "trans": [
     {
-      "transout": "00000000000002",
-      "transoutamt": "1111",
+      "transout": "11111111111111",
+      "transoutamt": "1200",
       "transincurr": "美元",
       "transinamt": "",
-      "transin": "00000000000002",
-      "transtype": "Male",
-      "transdate": "2024-03-29T16:00:00.000Z",
-      "declaration": "Male",
+      "transin": "55555555555555",
+      "transtype": "onetime",
+      "transdate": "2024-03-22T16:00:00.000Z",
+      "declaration": true,
       "transreason": "作外匯存款不在匯出1",
-      "transmemo": "AAAAA",
+      "transmemo": "註記..",
+      "transmemo2": "申報性質..",
+      "confirm": "CCCCCCCC",
       "id": 1
     }
   ]

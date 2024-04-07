@@ -3,11 +3,17 @@
 }
 
 .main-body {
-  padding-top: 20px;
+  //padding-top: 20px;
+  padding: 10px;
   margin: 0 auto;
   max-width: 1348px;
+  //border: 1px solid #73AD21;
   mat-form-field {
     width: 100%;
+  }
+  mat-card {
+    width: 100%;  
+    //min-height: 548px;
   }
   .pr{
     width: 85% ;

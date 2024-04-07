@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { CoreService } from '../../core/core.service';
 import { EmployeeService } from 'src/app/@services/employee.service';
-
+import { MatStepper } from '@angular/material/stepper';
 @Component({
   selector: 'app-stepper',
   templateUrl: './stepper.component.html',
@@ -10,10 +10,17 @@ import { EmployeeService } from 'src/app/@services/employee.service';
 })
 export class StepperComponent implements OnInit {
   transout: string[] = [
-    '00000000000001',
-    '00000000000002',
-    '00000000000003',
-    '00000000000004'
+    '11111111111111',
+    '22222222222222',
+    '33333333333333',
+    '44444444444444'
+  ];
+  
+  transin: string[] = [
+    '55555555555555',
+    '66666666666666',
+    '77777777777777',
+    '88888888888888'
   ];
   
   currency: string[] = [
@@ -31,6 +38,7 @@ export class StepperComponent implements OnInit {
   
   stepForm: FormGroup;
   editdata: any;
+  edit!: boolean ;
   
   constructor(
     private _fb: FormBuilder,
@@ -48,6 +56,8 @@ export class StepperComponent implements OnInit {
       declaration: '',
       transreason: '',
       transmemo: '',
+      transmemo2: '',
+      confirm:''
     });
   }
   
@@ -57,6 +67,8 @@ export class StepperComponent implements OnInit {
       this.editdata = res;
       this.stepForm.patchValue(this.editdata);
       console.log(this.stepForm.value);
+      this.edit = this.stepForm.get('declaration')?.value;
+      console.log(this.edit);
     });
   }
   
@@ -73,4 +85,15 @@ export class StepperComponent implements OnInit {
       });
     }
   }
+  
+  call(){
+    this.edit = !this.edit;
+    console.log(this.edit);
+  }
+  
+  goBack(stepper: MatStepper){
+    //stepper.previous();
+    stepper.selectedIndex = 0 ;
+  }
+  
 }
